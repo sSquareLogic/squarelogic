@@ -13,6 +13,9 @@ const config: Config = {
         BLACK: "#181818",
         GRAY: "rgba(0, 0, 0, 0.6)",
       },
+      gridTemplateColumns: {
+        ABOUT: "40% 60%",
+      },
     },
   },
   plugins: [],
