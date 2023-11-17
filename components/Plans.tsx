@@ -24,7 +24,7 @@ const Plans = () => {
   ];
   return (
     <section className="plans">
-      <Container className="flex flex-col gap-20">
+      <Container className="flex flex-col gap-20 py-[100px]">
         <div className="grid grid-cols-ABOUT gap-10">
           <h6 className="text-lg font-medium">(Pricing)</h6>
           <p className="text-[32px] font-medium">Choose the tariff plan that suits you needs</p>
