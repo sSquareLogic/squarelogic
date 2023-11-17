@@ -3,3 +3,5 @@ const colors = {
   BLACK: "#181818",
   GRAY: "rgba(0, 0, 0, 0.6)",
 };
+
+export default colors;

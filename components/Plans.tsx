@@ -2,6 +2,26 @@ import Container from "./Container";
 import Plan from "./Plan";
 
 const Plans = () => {
+  const plans = [
+    {
+      name: "Landing page",
+      features: ["1 page", "up to 3 sections", "up to 3 edits"],
+      price: "$300",
+      white: false,
+    },
+    {
+      name: "Landing page +",
+      features: ["1 page", "unlimited sections", "up to 7 edits", "CMS (Content Management System)"],
+      price: "$500",
+      white: true,
+    },
+    {
+      name: "Multipage website",
+      features: ["up to 5 pages", "unlimited sections", "up to 12 edits", "CMS (Content Management System)"],
+      price: "$1000",
+      white: false,
+    },
+  ];
   return (
     <section className="plans">
       <Container className="flex flex-col gap-20">
@@ -10,9 +30,9 @@ const Plans = () => {
           <p className="text-[32px] font-medium">Choose the tariff plan that suits you needs</p>
         </div>
         <div className="grid grid-cols-THREE gap-6">
-          <Plan />
-          <Plan />
-          <Plan />
+          {plans.map((plan, i) => (
+            <Plan key={i} features={plan.features} name={plan.name} price={plan.price} white={plan.white} />
+          ))}
         </div>
       </Container>
     </section>
