@@ -12,7 +12,7 @@ const Plan = ({ features, name, price, white }: IProps) => {
   return (
     <div
       className="plan rounded-[4px] border border-BLACK border-solid p-10 flex flex-col gap-10"
-      style={white ? { backgroundColor: colors.BLACK, color: colors.WHITE } : {}}
+      style={white ? { backgroundColor: colors.BLACK, color: colors.ACCENT } : {}}
     >
       <div className="flex items-center justify-between gap-6">
         <h6 className="font-bold text-lg">{name}</h6>

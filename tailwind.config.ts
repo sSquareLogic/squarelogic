@@ -12,6 +12,7 @@ const config: Config = {
         WHITE: "#F2F2F2",
         BLACK: "#181818",
         GRAY: "rgba(0, 0, 0, 0.6)",
+        ACCENT: "#AAEEC4",
       },
       gridTemplateColumns: {
         ABOUT: "40% 60%",
