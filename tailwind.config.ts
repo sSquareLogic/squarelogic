@@ -15,6 +15,8 @@ const config: Config = {
       },
       gridTemplateColumns: {
         ABOUT: "40% 60%",
+        TWO: "repeat(2, 1fr)",
+        THREE: "repeat(3, 1fr)",
       },
     },
   },
