@@ -13,6 +13,7 @@ const config: Config = {
         BLACK: "#181818",
         GRAY: "rgba(0, 0, 0, 0.6)",
         ACCENT: "#AAEEC4",
+        NAV: "rgba(77, 77, 77, 0.85)",
       },
       gridTemplateColumns: {
         ABOUT: "40% 60%",
