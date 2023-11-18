@@ -17,7 +17,6 @@
     "next-sanity": "^5.5.10",
     "react": "^18",
     "react-dom": "^18",
-    "resize-observer-polyfill": "^1.5.1",
     "sanity": "^3.19.2",
     "styled-components": "5.2"
   },
