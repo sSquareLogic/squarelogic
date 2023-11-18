@@ -1,10 +1,13 @@
+import AnimationContextProvider from "@/context/AnimationContext";
 import FloatingNav from "@/components/FloatingNav";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <div>
-      <FloatingNav />
-      {children}
+      <AnimationContextProvider>
+        <FloatingNav />
+        {children}
+      </AnimationContextProvider>
     </div>
   );
 }

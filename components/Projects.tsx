@@ -1,3 +1,4 @@
+import AnimatedButton from "./AnimatedButton";
 import Container from "./Container";
 import Link from "next/link";
 import Project from "./Project";
@@ -21,12 +22,7 @@ const Projects = () => {
           />
         </div>
         <div className="flex justify-center">
-          <Link
-            href={"/"}
-            className="w-fit py-4 px-6 rounded-[70px] border-BLACK border-solid border text-BLACK text-lg font-medium"
-          >
-            See all projects
-          </Link>
+          <AnimatedButton name="See all projects" link="/" />
         </div>
       </Container>
     </section>

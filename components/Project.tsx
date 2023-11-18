@@ -1,3 +1,4 @@
+import AnimatedImage from "./AnimatedImage";
 import Image from "next/image";
 import Tag from "./Tag";
 
@@ -12,7 +13,9 @@ const Project = ({ date, tags, title, image }: IProps) => {
   return (
     <div className="flex flex-col gap-4">
       <div className="project relative rounded-[4px] overflow-hidden">
-        <Image src={image} alt="Project image" width={1320} height={640} className="w-full h-full object-cover" />
+        <AnimatedImage>
+          <Image src={image} alt="Project image" width={1320} height={640} className="w-full h-full object-cover" />
+        </AnimatedImage>
         <div className="tags absolute top-4 right-4">
           {tags.map((tag, i) => (
             <Tag tag={tag} key={i} />
