@@ -23,6 +23,7 @@ const AnimatedTextWord = ({ text }: IProps) => {
       opacity: 1,
       x: 0,
       y: 0,
+      rotateX: "0deg",
       transition: {
         type: "tween",
         damping: 12,
@@ -33,6 +34,7 @@ const AnimatedTextWord = ({ text }: IProps) => {
       opacity: 0,
       x: 20,
       y: 20,
+      rotateX: "90deg",
       transition: {
         type: "tween",
         damping: 12,

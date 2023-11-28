@@ -44,12 +44,14 @@ const Hero = () => {
             initial={{
               opacity: 1,
               y: "0%",
+              rotateX: "0deg",
             }}
             animate={
               !isBigTextInView
                 ? {
                     opacity: 0,
                     y: "-100%",
+                    rotateX: "90deg",
                   }
                 : {}
             }
