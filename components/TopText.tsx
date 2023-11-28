@@ -27,7 +27,7 @@ const TopText = ({ isBigTextInView }: IProps) => {
   }, [isBigTextInView, animationControl]);
   return (
     <motion.h1
-      className="top-text pointer-events-none fixed top-4 left-[50%] text-ACCENT uppercase font-bold text-3xl mix-blend-color-dodge z-[100]"
+      className="top-text pointer-events-none fixed top-4 left-[50%] text-ACCENT uppercase font-bold text-3xl mix-blend-difference z-[100]"
       initial={{
         x: "-50%",
         y: "-100%",

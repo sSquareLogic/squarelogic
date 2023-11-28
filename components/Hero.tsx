@@ -23,14 +23,14 @@ const Hero = () => {
         >
           {name.split("").map((char, i) => {
             const distance = Math.abs(middle - (i + 1));
-            const delay = distance * 0.2;
+            const delay = distance * 0.1;
             return (
               <motion.span
                 className="inline-block leading-[100%]"
                 key={i}
                 initial={{ y: "100%" }}
                 animate={{ y: "0%" }}
-                transition={{ type: "tween", duration: 0.6, delay: delay, ease: "easeOut" }}
+                transition={{ type: "tween", duration: 0.3, delay: delay, ease: "easeOut" }}
               >
                 {char}
               </motion.span>
