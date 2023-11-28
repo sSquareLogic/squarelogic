@@ -79,7 +79,7 @@ const FloatingNav = () => {
             {hoveredTab === link.name ? (
               <motion.div
                 layout
-                className="w-[5px] h-[5px] rounded-full bg-ACCENT absolute top-[calc(50% + 4px)] left-[50%] -translate-x-[50%] -translate-y-[50%]"
+                className="w-[5px] h-[5px] rounded-full bg-ACCENT absolute top-[100%] left-[50%] -translate-x-[50%]"
                 layoutId="circle"
                 transition={{
                   type: "tween",
