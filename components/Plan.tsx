@@ -3,31 +3,19 @@ import colors from "@/settings/colors";
 
 interface IProps {
   name: string;
-  price: string;
   features: string[];
   white?: boolean;
 }
 
-const Plan = ({ features, name, price, white }: IProps) => {
+const Plan = ({ features, name, white }: IProps) => {
   return (
     <div
-      className="plan rounded-[4px] border border-BLACK border-solid p-10 flex flex-col gap-10"
-      style={white ? { backgroundColor: colors.BLACK, color: colors.WHITE } : {}}
+      className="plan rounded-[4px] border border-BLACK border-solid p-10 flex flex-col gap-10 z-[51]"
+      style={white ? { backgroundColor: colors.BLACK, color: colors.WHITE } : { backgroundColor: "white" }}
     >
       <div className="flex items-center justify-between gap-6">
-        <h6 className="font-bold text-lg">{name}</h6>
-        {white ? (
-          <span
-            className="block bg-WHITE rounded-[25px] px-2 py-1 text-BLACK text-[10px] font-bold"
-            style={white ? { backgroundColor: colors.ACCENT } : {}}
-          >
-            Popular
-          </span>
-        ) : null}
+        <h6 className="font-bold text-[32px]">{name}</h6>
       </div>
-      <span className="font-bold text-[56px]" style={white ? { color: colors.ACCENT } : {}}>
-        {price}
-      </span>
       <div
         className="features flex flex-col gap-4 border-t border-BLACK border-solid py-6"
         style={white ? { borderColor: colors.WHITE } : {}}
@@ -37,7 +25,7 @@ const Plan = ({ features, name, price, white }: IProps) => {
           {features.map((feature, i) => (
             <div className="flex items-center gap-2" key={i}>
               <Image
-                src={white ? "/tick-white.svg" : "/tick.svg"}
+                src={white ? "/tick-green.svg" : "/tick.svg"}
                 alt="Tick icon"
                 width={14}
                 height={14}

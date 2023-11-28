@@ -3,16 +3,16 @@
 import { Dispatch, PropsWithChildren, SetStateAction, createContext, useMemo, useState } from "react";
 
 interface IAnimationContext {
-  state: "default" | "hoveringImage";
-  setState: Dispatch<SetStateAction<IAnimationContext["state"]>>;
+  followerState: "default" | "hoveringImage" | "hoveringNav";
+  setFollowerState: Dispatch<SetStateAction<IAnimationContext["followerState"]>>;
 }
 
 export const AnimationContext = createContext<IAnimationContext>({} as IAnimationContext);
 
 const AnimationContextProvider = ({ children }: PropsWithChildren) => {
-  const [state, setState] = useState<IAnimationContext["state"]>("default");
+  const [followerState, setFollowerState] = useState<IAnimationContext["followerState"]>("default");
 
-  const memo = useMemo(() => ({ state, setState }), [state, setState]);
+  const memo = useMemo(() => ({ followerState, setFollowerState }), [followerState, setFollowerState]);
 
   return <AnimationContext.Provider value={memo}>{children}</AnimationContext.Provider>;
 };

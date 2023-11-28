@@ -1,16 +1,17 @@
 "use client";
 
 import { motion, useMotionValue, useSpring } from "framer-motion";
+import { useContext, useRef } from "react";
 
 import { AnimationContext } from "@/context/AnimationContext";
 import Image from "next/image";
-import { useContext } from "react";
+import colors from "@/settings/colors";
 import { useEffect } from "react";
 
 const MouseFollower = () => {
-  const { state } = useContext(AnimationContext);
+  const { followerState } = useContext(AnimationContext);
 
-  const cursorSize = state === "hoveringImage" ? 110 : 24;
+  const cursorSize = followerState === "hoveringImage" ? 110 : 24;
   const mouse = {
     x: useMotionValue(0),
     y: useMotionValue(0),
@@ -22,11 +23,16 @@ const MouseFollower = () => {
     y: useSpring(mouse.y, smoothOptions),
   };
 
+  const ref = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const manageMouseMove = (e: MouseEvent) => {
       const { clientX, clientY } = e;
       mouse.x.set(clientX - cursorSize / 2);
       mouse.y.set(clientY - cursorSize / 2);
+      if (ref.current) {
+        ref.current.style.opacity = "1";
+      }
     };
 
     window.addEventListener("mousemove", manageMouseMove);
@@ -38,20 +44,25 @@ const MouseFollower = () => {
   return (
     <div>
       <motion.div
+        ref={ref}
         style={{
           left: smoothMouse.x,
           top: smoothMouse.y,
         }}
-        className="fixed w-8 h-8 bg-BLACK rounded-full pointer-events-none z-50 flex items-center justify-center"
+        className="fixed w-8 h-8 bg-BLACK rounded-full pointer-events-none z-50 flex items-center justify-center opacity-0"
         initial={{
           width: cursorSize,
           height: cursorSize,
         }}
         animate={
-          state === "hoveringImage"
+          followerState === "hoveringImage"
             ? {
                 width: 110,
                 height: 110,
+              }
+            : followerState === "hoveringNav"
+            ? {
+                backgroundColor: colors.GRAY,
               }
             : {}
         }
@@ -65,7 +76,7 @@ const MouseFollower = () => {
             duration: 0.2,
           }}
           animate={
-            state === "hoveringImage"
+            followerState === "hoveringImage"
               ? {
                   opacity: 1,
                   transition: {

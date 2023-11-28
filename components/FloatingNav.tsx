@@ -1,7 +1,11 @@
 "use client";
 
-import Magnetic from "./Magnetic";
+import { Variants, motion } from "framer-motion";
+import { useContext, useState } from "react";
+
+import { AnimationContext } from "@/context/AnimationContext";
 import NavLink from "./NavLink";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   {
@@ -26,15 +30,68 @@ const navLinks = [
   },
 ];
 
+const variants = {
+  navInitial: {
+    left: "50%",
+    x: "-50%",
+    opacity: 0,
+  },
+  navActive: {
+    left: "50%",
+    x: "-50%",
+    opacity: 1,
+  },
+};
+
+const findPathName = (path: string): string | undefined => {
+  return navLinks.find((el) => el.path === path)?.name;
+};
+
 const FloatingNav = () => {
+  const pathname = usePathname();
+
+  const currentPage = findPathName(pathname) || "";
+
+  const [hoveredTab, setHoveredTab] = useState<string>(currentPage);
+
+  const { setFollowerState } = useContext(AnimationContext);
   return (
-    <nav className="floating-nav bg-NAV flex items-center gap-6 px-10 py-[18.5px] fixed left-[50%] -translate-x-[50%] bottom-[25px] rounded-[54px] backdrop-blur-sm z-50">
-      {navLinks.map((link, i) => (
-        <Magnetic key={i}>
-          <NavLink name={link.name} link={link.link} path={link.path} />
-        </Magnetic>
-      ))}
-    </nav>
+    <motion.nav
+      className="floating-nav bg-NAV max-w-fit py-[18.5px] fixed bottom-[25px] rounded-[54px] backdrop-blur-sm z-[100] left-[50%] -translate-x-[50%]"
+      onMouseEnter={() => setFollowerState("hoveringNav")}
+      onMouseLeave={() => {
+        setFollowerState("default");
+        setTimeout(() => {
+          setHoveredTab(findPathName(pathname) || "");
+        }, 200);
+      }}
+    >
+      <div className="px-10 flex items-center gap-6">
+        {navLinks.map((link, i) => (
+          <motion.div
+            key={i}
+            className="relative"
+            onMouseOver={() => {
+              setHoveredTab(link.name);
+            }}
+          >
+            <NavLink name={link.name} link={link.link} path={link.path} />
+            {hoveredTab === link.name ? (
+              <motion.div
+                layout
+                className="w-[5px] h-[5px] rounded-full bg-ACCENT absolute top-[calc(50% + 4px)] left-[50%] -translate-x-[50%] -translate-y-[50%]"
+                layoutId="circle"
+                transition={{
+                  type: "tween",
+                  duration: 0.5,
+                  ease: "easeInOut",
+                }}
+              ></motion.div>
+            ) : null}
+          </motion.div>
+        ))}
+      </div>
+    </motion.nav>
   );
 };
 export default FloatingNav;

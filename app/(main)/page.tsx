@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import MouseFollower from "@/components/MouseFollower";
@@ -16,6 +17,7 @@ export default function Home() {
         <About />
         <Projects />
         <Plans />
+        <Contact />
         <Footer />
       </main>
     </>

@@ -1,15 +1,40 @@
+"use client";
+
 import Container from "./Container";
+import { motion } from "framer-motion";
 
 const Hero = () => {
+  const name = "SQUARELOGIC";
+
+  const middle = Math.ceil(name.length / 2);
+
   return (
     <section className="hero">
-      <Container className="flex flex-col gap-10 items-center">
-        <h1 className="font-bold text-[200px] leading-[100%] uppercase w-full">SQUARELOGIC</h1>
-        <p className="max-w-[70%] uppercase text-center text-2xl font-medium">
-          SquareLogic is a creative studio, specialized in strategy, branding, design, and development. Our work is
-          always at the intersection of design and technology.
-        </p>
-      </Container>
+      <div className="flex flex-col gap-10">
+        <motion.h1 className="font-bold text-center whitespace-nowrap text-[14.8vw] leading-[115%] uppercase w-full overflow-hidden">
+          {name.split("").map((char, i) => {
+            const distance = Math.abs(middle - (i + 1));
+            const delay = distance * 0.2;
+            return (
+              <motion.span
+                className="inline-block leading-[100%]"
+                key={i}
+                initial={{ y: "100%" }}
+                animate={{ y: "0%" }}
+                transition={{ type: "tween", duration: 0.7, delay: delay, ease: "easeOut" }}
+              >
+                {char}
+              </motion.span>
+            );
+          })}
+        </motion.h1>
+        <Container className="flex justify-center">
+          <p className="max-w-[70%] uppercase text-center text-2xl font-medium">
+            SquareLogic is a creative studio, specialized in strategy, branding, design, and development. Our work is
+            always at the intersection of design and technology.
+          </p>
+        </Container>
+      </div>
     </section>
   );
 };

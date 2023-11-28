@@ -6,19 +6,17 @@ const Plans = () => {
     {
       name: "Landing page",
       features: ["1 page", "up to 3 sections", "up to 3 edits"],
-      price: "$300",
+
       white: false,
     },
     {
       name: "Landing page +",
       features: ["1 page", "unlimited sections", "up to 7 edits", "CMS (Content Management System)"],
-      price: "$500",
       white: true,
     },
     {
       name: "Multipage website",
       features: ["up to 5 pages", "unlimited sections", "up to 12 edits", "CMS (Content Management System)"],
-      price: "$1000",
       white: false,
     },
   ];
@@ -31,7 +29,7 @@ const Plans = () => {
         </div>
         <div className="grid grid-cols-THREE gap-6">
           {plans.map((plan, i) => (
-            <Plan key={i} features={plan.features} name={plan.name} price={plan.price} white={plan.white} />
+            <Plan key={i} features={plan.features} name={plan.name} white={plan.white} />
           ))}
         </div>
       </Container>
