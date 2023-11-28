@@ -9,7 +9,7 @@ const AnimatedImage = ({ children }: PropsWithChildren) => {
   const { setFollowerState } = useContext(AnimationContext);
   return (
     <motion.div
-      className="overflow-hidden border-transparent rounded-[4px]"
+      className="overflow-hidden border-transparent rounded-[4px] max-h-[640px]"
       initial={{ borderWidth: 0 }}
       whileHover={{ borderWidth: 5 }}
       transition={{ type: "tween", duration: 0.3 }}
