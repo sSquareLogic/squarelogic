@@ -1,8 +1,6 @@
 import About from "@/components/About";
 import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
-import MouseFollower from "@/components/MouseFollower";
 import Plans from "@/components/Plans";
 import Projects from "@/components/Projects";
 import Selected from "@/components/Selected";
@@ -10,15 +8,13 @@ import Selected from "@/components/Selected";
 export default function Home() {
   return (
     <>
-      <MouseFollower />
-      <main className="main py-[124px] flex flex-col gap-[100px]">
-        <Hero />
+      <main className="home py-[124px] flex flex-col gap-[100px]">
+        <Hero text="SquareLogic is a creative studio, specialized in strategy, branding, design, and development. Our work is always at the intersection of design and technology." />
         <Selected />
         <About />
         <Projects />
         <Plans />
         <Contact />
-        <Footer />
       </main>
     </>
   );

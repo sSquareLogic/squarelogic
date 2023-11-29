@@ -7,7 +7,11 @@ import Container from "./Container";
 import TopText from "./TopText";
 import { useRef } from "react";
 
-const Hero = () => {
+interface IProps {
+  text: string;
+}
+
+const Hero = ({ text }: IProps) => {
   const name = "SQUARELOGIC";
 
   const middle = Math.ceil(name.length / 2);
@@ -56,7 +60,7 @@ const Hero = () => {
                 : {}
             }
           >
-            <AnimatedTextWord text="SquareLogic is a creative studio, specialized in strategy, branding, design, and development. Our work is always at the intersection of design and technology." />
+            <AnimatedTextWord text={text} />
           </motion.div>
         </Container>
       </div>
