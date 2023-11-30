@@ -6,10 +6,12 @@ import Projects from "@/components/Projects";
 import Selected from "@/components/Selected";
 
 export default function Home() {
+  const hero =
+    "SQUARELOGIC is a specialized creative studio focusing on strategic solutions, branding, design, and development, with a primary emphasis on serving the real estate and e-commerce industries.";
   return (
     <>
-      <main className="home py-[124px] flex flex-col gap-[100px]">
-        <Hero text="SquareLogic is a creative studio, specialized in strategy, branding, design, and development. Our work is always at the intersection of design and technology." />
+      <main className="home py-[124px] flex flex-col gap-[100px] max-md:py-20 max-md:gap-[150px] max-sm:gap-[100px] max-sm:py-10 max-[450px]:py-6">
+        <Hero text={hero} />
         <Selected />
         <About />
         <Projects />

@@ -16,7 +16,7 @@ const config: Config = {
         NAV: "rgba(77, 77, 77, 0.85)",
       },
       gridTemplateColumns: {
-        ABOUT: "40% 60%",
+        ABOUT: "20% auto",
         TWO: "repeat(2, 1fr)",
         THREE: "repeat(3, 1fr)",
       },

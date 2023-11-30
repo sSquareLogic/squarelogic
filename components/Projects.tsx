@@ -6,7 +6,7 @@ import Project from "./Project";
 const Projects = () => {
   return (
     <section className="projects">
-      <Container className="flex flex-col gap-12 py-[100px]">
+      <Container className="flex flex-col gap-12 py-[100px] max-md:py-[50px] max-sm:py-0">
         <div className="flex flex-col gap-10">
           <Project
             date="2022"

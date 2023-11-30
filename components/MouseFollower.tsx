@@ -42,7 +42,7 @@ const MouseFollower = () => {
   }, [mouse.x, mouse.y, cursorSize]);
 
   return (
-    <div>
+    <div className="max-md:hidden">
       <motion.div
         ref={ref}
         style={{

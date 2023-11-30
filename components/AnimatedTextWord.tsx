@@ -45,7 +45,7 @@ const AnimatedTextWord = ({ text }: IProps) => {
 
   return (
     <motion.div
-      className="max-w-[70%] uppercase overflow-hidden flex flex-wrap justify-center text-2xl font-medium gap-y-1"
+      className="max-w-[70%] uppercase overflow-hidden flex flex-wrap justify-center text-2xl font-medium gap-y-1 max-md:text-xl max-md:max-w-none max-sm:text-lg"
       variants={container}
       initial="hidden"
       animate="visible"
