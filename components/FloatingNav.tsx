@@ -1,6 +1,6 @@
 "use client";
 
-import { Variants, motion } from "framer-motion";
+import {  motion } from "framer-motion";
 import { useContext, useState } from "react";
 
 import { AnimationContext } from "@/context/AnimationContext";
@@ -18,30 +18,17 @@ const navLinks = [
     link: "/projects",
     path: "/projects",
   },
-  {
-    name: "About",
-    link: "/about",
-    path: "/about",
-  },
-  {
-    name: "Contact",
-    link: "/contact",
-    path: "/contact",
-  },
+  // {
+  //   name: "About",
+  //   link: "/about",
+  //   path: "/about",
+  // },
+  // {
+  //   name: "Contact",
+  //   link: "/contact",
+  //   path: "/contact",
+  // },
 ];
-
-const variants = {
-  navInitial: {
-    left: "50%",
-    x: "-50%",
-    opacity: 0,
-  },
-  navActive: {
-    left: "50%",
-    x: "-50%",
-    opacity: 1,
-  },
-};
 
 const findPathName = (path: string): string | undefined => {
   return navLinks.find((el) => el.path === path)?.name;

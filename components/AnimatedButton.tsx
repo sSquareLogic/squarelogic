@@ -26,7 +26,7 @@ const AnimatedButton = ({ name, onClick, link }: IProps) => {
         onClick={onClick}
         initial="rest"
         whileHover="active"
-        className="relative w-fit py-4 px-6 rounded-[70px] border-BLACK border-solid bordertext-lg font-medium"
+        className="relative w-fit py-4 px-6 rounded-[70px] border-BLACK border-solid border text-lg font-medium"
       >
         {name}
         <motion.div

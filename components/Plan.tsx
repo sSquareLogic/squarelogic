@@ -10,7 +10,7 @@ interface IProps {
 const Plan = ({ features, name, white }: IProps) => {
   return (
     <div
-      className="plan rounded-[4px] border border-BLACK border-solid p-10 flex flex-col gap-10 z-[51]"
+      className="plan rounded-[4px] border border-BLACK border-solid p-10 flex flex-col gap-10 z-[51] max-[1200px]:px-6"
       style={white ? { backgroundColor: colors.BLACK, color: colors.WHITE } : { backgroundColor: "white" }}
     >
       <div className="flex items-center justify-between gap-6">

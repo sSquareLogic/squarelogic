@@ -4,30 +4,41 @@ import Plan from "./Plan";
 const Plans = () => {
   const plans = [
     {
-      name: "Landing page",
-      features: ["1 page", "up to 3 sections", "up to 3 edits"],
-
+      name: "Engagement Enhancement",
+      features: [
+        "Interactive Visual Elements",
+        "Mobile Responsiveness",
+        "Social Media Integration",
+        "Feedback Mechanism",
+        "Personalized User Dashboards",
+      ],
       white: false,
     },
     {
-      name: "Landing page +",
-      features: ["1 page", "unlimited sections", "up to 7 edits", "CMS (Content Management System)"],
+      name: "Comprehensive Functionality",
+      features: ["Filtering", "Searching", "User Account Management", "CRM Integration", "Analytics"],
       white: true,
     },
     {
-      name: "Multipage website",
-      features: ["up to 5 pages", "unlimited sections", "up to 12 edits", "CMS (Content Management System)"],
+      name: "Support and Maintenance",
+      features: [
+        "24/7 Customer Support",
+        "Regular Software Updates",
+        "Bug Fixes",
+        "Performance Optimization",
+        "Security Patches",
+      ],
       white: false,
     },
   ];
   return (
     <section className="plans">
       <Container className="flex flex-col gap-20 py-[100px]">
-        <div className="grid grid-cols-ABOUT gap-10">
-          <h6 className="text-lg font-medium">(Pricing)</h6>
-          <p className="text-[32px] font-medium">Choose the tariff plan that suits you needs</p>
+        <div className="flex justify-between items-center gap-10">
+          <h6 className="text-lg font-medium">(Our solutions)</h6>
+          <p className="text-[32px] font-medium">What we offer</p>
         </div>
-        <div className="grid grid-cols-THREE gap-6">
+        <div className="grid grid-cols-THREE gap-6 max-[1200px]:gap-2">
           {plans.map((plan, i) => (
             <Plan key={i} features={plan.features} name={plan.name} white={plan.white} />
           ))}
