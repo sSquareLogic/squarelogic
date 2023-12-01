@@ -5,11 +5,12 @@ interface IProps {
   src: string;
   title: string;
   description: string;
+  link: string;
 }
 
-const ProjectImage = ({ src, description, title }: IProps) => {
+const ProjectImage = ({ src, description, title, link }: IProps) => {
   return (
-    <div className="projects-row flex flex-col gap-6">
+    <a href={link} target="_blank" className="projects-row flex flex-col gap-6">
       <AnimatedImage>
         <Image
           src={src}
@@ -23,7 +24,7 @@ const ProjectImage = ({ src, description, title }: IProps) => {
       <p className="text-2xl">
         <span className="font-bold">{title}</span> - {description}
       </p>
-    </div>
+    </a>
   );
 };
 export default ProjectImage;
