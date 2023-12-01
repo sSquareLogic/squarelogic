@@ -11,7 +11,7 @@ import { useEffect } from "react";
 const MouseFollower = () => {
   const { followerState } = useContext(AnimationContext);
 
-  const cursorSize = followerState === "hoveringImage" ? 110 : 24;
+  const cursorSize = followerState === "hoveringImage" ? 110 : 16;
   const mouse = {
     x: useMotionValue(0),
     y: useMotionValue(0),
@@ -49,7 +49,7 @@ const MouseFollower = () => {
           left: smoothMouse.x,
           top: smoothMouse.y,
         }}
-        className="fixed w-8 h-8 bg-BLACK rounded-full pointer-events-none z-50 flex items-center justify-center opacity-0"
+        className="fixed w-4 h-4 bg-BLACK rounded-full pointer-events-none z-50 flex items-center justify-center opacity-0"
         initial={{
           width: cursorSize,
           height: cursorSize,

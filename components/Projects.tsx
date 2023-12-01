@@ -1,28 +1,29 @@
 import AnimatedButton from "./AnimatedButton";
 import Container from "./Container";
-import Link from "next/link";
 import Project from "./Project";
 
 const Projects = () => {
   return (
     <section className="projects">
-      <Container className="flex flex-col gap-12 py-[100px] max-md:py-[50px] max-sm:py-0">
+      <Container className="flex flex-col gap-12">
         <div className="flex flex-col gap-10">
           <Project
-            date="2022"
-            tags={["design", "development"]}
-            image={"/projects_1.jpg"}
-            title="Ecommerce website for a local bussiness. Web design and web development"
+            link="https://duggthevicious.com"
+            date="2023"
+            tags={["design", "portfolio"]}
+            image={"/duggthevicious.png"}
+            title="A portfolio website for a web developer"
           />
           <Project
-            date="2022"
-            tags={["design", "development"]}
-            image={"/projects_2.jpg"}
-            title="Ecommerce website for a local bussiness. Web design and web development"
+            link="https://makecentsnow.com"
+            date="2023"
+            tags={["design", "development", "currency"]}
+            image={"/makecents.png"}
+            title="App to stop the hassle of coins in your pocket & around the house."
           />
         </div>
         <div className="flex justify-center">
-          <AnimatedButton name="See all projects" link="/" />
+          <AnimatedButton name="See all projects" link="/projects" />
         </div>
       </Container>
     </section>

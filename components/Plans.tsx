@@ -33,7 +33,7 @@ const Plans = () => {
   ];
   return (
     <section className="plans">
-      <Container className="flex flex-col gap-20 pb-[100px] max-md:gap-10 max-md:pb-[50px] max-sm:pb-0">
+      <Container className="flex flex-col gap-20">
         <div className="flex justify-between items-center gap-10 max-md:flex-col max-md:justify-normal max-md:items-start max-md:gap-4">
           <h6 className="text-lg font-medium">(Our solutions)</h6>
           <p className="text-[32px] font-medium">What we offer</p>

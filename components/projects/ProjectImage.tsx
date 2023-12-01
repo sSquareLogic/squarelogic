@@ -17,7 +17,7 @@ const ProjectImage = ({ src, description, title }: IProps) => {
           unoptimized
           width={600}
           height={600}
-          className="object-cover object-center w-full h-full aspect-square"
+          className="object-cover object-center w-full h-full aspect-square transition-all hover:scale-[105%] ease-out duration-500"
         />
       </AnimatedImage>
       <p className="text-2xl">

@@ -21,11 +21,10 @@ const ScrollProgress = ({ children }: IProps) => {
           top: 0,
           left: 0,
           right: 0,
-          background: colors.ACCENT,
+          background: colors.BLACK,
           transformOrigin: "0%",
           zIndex: 100,
           height: 3,
-          mixBlendMode: "difference",
         }}
       ></motion.div>
       {children}
