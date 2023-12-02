@@ -18,6 +18,12 @@ const ProjectsShow = () => {
             src={"/duggthevicious.png"}
             title="duggthevicious"
           />
+          <ProjectImage
+            link="https://edu-red.vercel.app/"
+            description="A website about endangered species"
+            src={"/edured.png"}
+            title="EduRed."
+          />
         </div>
         <div className="projects-row flex flex-col gap-6 mt-40 max-md:mt-20 max-[680px]:mt-0">
           <ProjectImage
@@ -25,6 +31,18 @@ const ProjectsShow = () => {
             description="A portfolio website for a fitness coach"
             src="/esomartin.png"
             title="Eso Martin"
+          />
+          <ProjectImage
+            link="https://bclub001.vercel.app"
+            description="A website for a luxury barber shop"
+            src="/bclub.png"
+            title="Force Academy"
+          />
+          <ProjectImage
+            link="https://passwords.duggthevicious.com"
+            description="A website for generating passwords with options"
+            src="/passwordgenerator.png"
+            title="Password Generator"
           />
         </div>
       </Container>
