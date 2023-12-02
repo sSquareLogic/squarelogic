@@ -21,14 +21,14 @@ export const metadata: Metadata = {
   twitter: {
     title: "SquareLogic",
     description: "SQUARELOGIC is...",
-    site: "@site",
+    site: "squarelogic.space",
     card: "summary_large_image",
     images: ["/logo.png"],
   },
   openGraph: {
     title: "SquareLogic",
     description: "SQUARELOGIC is...",
-    siteName: "@site",
+    siteName: "squarelogic.space",
     images: ["/logo.png"],
   },
 };
