@@ -54,7 +54,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${spacegr.className} text-BLACK bg-WHITE`}>{children}</body>
+      <body className={`${spacegr.className} text-WHITE bg-BLACK`}>{children}</body>
     </html>
   );
 }

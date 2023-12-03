@@ -26,12 +26,12 @@ const AnimatedButton = ({ name, onClick, link }: IProps) => {
         onClick={onClick}
         initial="rest"
         whileHover="active"
-        className="relative w-fit py-4 px-6 rounded-[70px] border-BLACK border-solid border text-lg font-medium"
+        className="relative w-fit py-4 px-6 rounded-[70px] border-WHITE border-solid border text-lg font-medium"
       >
         {name}
         <motion.div
           variants={variants}
-          className="absolute top-[50%] left-0 w-full h-0 -translate-y-[50%] bg-BLACK text-WHITE z-[51] flex items-center justify-center overflow-hidden pointer-events-none"
+          className="absolute top-[50%] left-0 w-full h-0 -translate-y-[50%] bg-WHITE text-BLACK z-[51] flex items-center justify-center overflow-hidden pointer-events-none"
         >
           {name}
         </motion.div>
@@ -43,12 +43,12 @@ const AnimatedButton = ({ name, onClick, link }: IProps) => {
       type="button"
       initial="rest"
       whileHover="active"
-      className="relative w-fit py-4 px-6 rounded-[70px] border-BLACK border-solid border text-lg font-medium"
+      className="relative w-fit py-4 px-6 rounded-[70px] border-WHITE border-solid border text-lg font-medium"
     >
       {name}
       <motion.div
         variants={variants}
-        className="absolute top-[50%] left-0 w-full h-0 -translate-y-[50%] bg-BLACK text-WHITE z-[51] flex items-center justify-center overflow-hidden pointer-events-none"
+        className="absolute top-[50%] left-0 w-full h-0 -translate-y-[50%] bg-WHITE text-BLACK z-[51] flex items-center justify-center overflow-hidden pointer-events-none"
       >
         {name}
       </motion.div>

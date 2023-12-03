@@ -49,7 +49,7 @@ const MouseFollower = () => {
           left: smoothMouse.x,
           top: smoothMouse.y,
         }}
-        className="fixed w-4 h-4 bg-BLACK rounded-full pointer-events-none z-50 flex items-center justify-center opacity-0"
+        className="fixed w-4 h-4 bg-WHITE rounded-full pointer-events-none z-50 flex items-center justify-center opacity-0"
         initial={{
           width: cursorSize,
           height: cursorSize,

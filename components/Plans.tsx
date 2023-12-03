@@ -12,12 +12,12 @@ const Plans = () => {
         "Feedback Mechanism",
         "Personalized User Dashboards",
       ],
-      white: false,
+      white: true,
     },
     {
       name: "Comprehensive Functionality",
       features: ["Filtering", "Searching", "User Account Management", "CRM Integration", "Analytics"],
-      white: true,
+      white: false,
     },
     {
       name: "Support and Maintenance",
@@ -28,7 +28,7 @@ const Plans = () => {
         "Performance Optimization",
         "Security Patches",
       ],
-      white: false,
+      white: true,
     },
   ];
   return (

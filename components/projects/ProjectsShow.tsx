@@ -61,7 +61,7 @@ const ProjectsShow = () => {
   return (
     <section className="projects-show">
       <Container className="grid grid-cols-TWO gap-20 max-lg:gap-14 max-md:gap-10 max-[680px]:flex max-[680px]:flex-col max-[680px]:gap-6">
-        <div className="projects-row flex flex-col gap-6">
+        <div className="projects-row flex flex-col gap-[92px] max-sm:gap-20">
           {projects.row_1.map((project, i) => (
             <AnimateInView key={i}>
               <ProjectImage
@@ -74,7 +74,7 @@ const ProjectsShow = () => {
           ))}
         </div>
         <motion.div
-          className="projects-row flex flex-col gap-6 mt-40 max-md:mt-20 max-[680px]:mt-0"
+          className="projects-row flex flex-col gap-[92px] mt-40 max-md:mt-20 max-[680px]:mt-0 max-sm:gap-20"
           style={!stopAnimation ? { y } : {}}
         >
           {projects.row_2.map((project, i) => (
