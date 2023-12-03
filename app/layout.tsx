@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: "SquareLogic",
     description:
       "We are a team of enthusiastic designers and developers. We specialize in UI/UX design and web development.",
-    site: "squarelogic.space",
+    site: "SquareLogic",
     card: "summary_large_image",
     images: ["/summary_large_image.png"],
   },
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     type: "website",
     description:
       "We are a team of enthusiastic designers and developers. We specialize in UI/UX design and web development.",
-    siteName: "squarelogic.space",
+    siteName: "SquareLogic",
     images: ["/summary_large_image.png"],
   },
 };
