@@ -63,7 +63,7 @@ const ProjectsShow = () => {
       <Container className="grid grid-cols-TWO gap-20 max-lg:gap-14 max-md:gap-10 max-[680px]:flex max-[680px]:flex-col max-[680px]:gap-6">
         <div className="projects-row flex flex-col gap-6">
           {projects.row_1.map((project, i) => (
-            <AnimateInView key={Math.random()}>
+            <AnimateInView key={i}>
               <ProjectImage
                 description={project.description}
                 link={project.link}
@@ -78,7 +78,7 @@ const ProjectsShow = () => {
           style={!stopAnimation ? { y } : {}}
         >
           {projects.row_2.map((project, i) => (
-            <AnimateInView key={Math.random()}>
+            <AnimateInView key={i}>
               <ProjectImage
                 description={project.description}
                 link={project.link}
