@@ -1,6 +1,7 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Space_Grotesk } from "next/font/google";
 import { URL } from "url";
 import colors from "@/settings/colors";
@@ -55,6 +56,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`${spacegr.className} text-WHITE bg-BLACK`}>{children}</body>
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-J5G9E3MEJJ"></Script>
+      <Script id="google-analytics">
+        {`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J5G9E3MEJJ');`}
+      </Script>
     </html>
   );
 }
