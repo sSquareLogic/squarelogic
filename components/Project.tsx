@@ -23,7 +23,7 @@ const Project = ({ date, tags, title, image }: IProps) => {
             className="w-full h-full object-cover transition-all hover:scale-[105%] ease-out duration-500"
           />
         </AnimatedImage>
-        <div className="tags absolute top-4 right-4 gap-2">
+        <div className="tags absolute top-4 right-4 flex items-center gap-2">
           {tags.map((tag, i) => (
             <Tag tag={tag} key={i} />
           ))}

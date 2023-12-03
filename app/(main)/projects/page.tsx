@@ -1,5 +1,12 @@
 import Hero from "@/components/Hero";
+import { Metadata } from "next";
 import ProjectsShow from "@/components/projects/ProjectsShow";
+
+export const metadata: Metadata = {
+  title: "Our works | SquareLogic",
+  description:
+    "Creating outstanding user experiences. We help bring ideas to life and create digital products that work.",
+};
 
 const Projects = () => {
   return (

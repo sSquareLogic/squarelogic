@@ -2,34 +2,52 @@ import "./globals.css";
 
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
+import { URL } from "url";
 import colors from "@/settings/colors";
 
 const spacegr = Space_Grotesk({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  viewport: {
-    width: "device-width",
-    maximumScale: 1,
-    initialScale: 1,
-  },
-  applicationName: "squarelogic.space",
-  themeColor: colors.ACCENT,
+export const viewport = {
+  width: "device-width",
+  maximumScale: 1,
+  initialScale: 1,
+  themeColor: colors.WHITE,
   colorScheme: "only light",
-  title: "SquareLogic",
+};
+
+export const metadata: Metadata = {
+  applicationName: "squarelogic.space",
+  metadataBase: new URL("https://squarelogic.space"),
+  keywords: [
+    "Responsive Web Design",
+    "UX Design",
+    "SEO Techniques",
+    "Front-end Development",
+    "Mobile-Friendly Design",
+    "Web Development Services",
+    "Website Redesign",
+    "E-commerce Development",
+    "Custom Web Design",
+    "CMS Implementation",
+  ],
+  title: "SquareLogic | Web design & development agency",
   description:
-    "SQUARELOGIC is a specialized creative studio focusing on strategic solutions, branding, design, and development, with a primary emphasis on serving the real estate and e-commerce industries.",
+    "We are a team of enthusiastic designers and developers. We specialize in UI/UX design and web development.",
   twitter: {
     title: "SquareLogic",
-    description: "SQUARELOGIC is...",
+    description:
+      "We are a team of enthusiastic designers and developers. We specialize in UI/UX design and web development.",
     site: "squarelogic.space",
     card: "summary_large_image",
-    images: ["/logo.png"],
+    images: ["/summary_large_image.png"],
   },
   openGraph: {
     title: "SquareLogic",
-    description: "SQUARELOGIC is...",
+    type: "website",
+    description:
+      "We are a team of enthusiastic designers and developers. We specialize in UI/UX design and web development.",
     siteName: "squarelogic.space",
-    images: ["/logo.png"],
+    images: ["/summary_large_image.png"],
   },
 };
 
