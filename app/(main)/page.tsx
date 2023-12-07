@@ -1,10 +1,10 @@
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
-import ParallaxText from "@/components/ParralaxText";
 import Plans from "@/components/Plans";
 import Projects from "@/components/Projects";
 import Selected from "@/components/Selected";
+import Workflow from "@/components/Workflow";
 
 export default function Home() {
   const hero =
@@ -16,6 +16,7 @@ export default function Home() {
         <Selected />
         <About />
         <Projects />
+        <Workflow />
         <Plans />
         <Contact />
       </main>
