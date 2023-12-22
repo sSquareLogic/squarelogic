@@ -32,7 +32,7 @@ const Project = ({ date, tags, title, image, name }: IProps) => {
       </div>
       <div className="flex items-center justify-between gap-6 text-lg font-medium">
         <span>{name}</span>
-        <h6>{title}</h6>
+        <h6 className="leading-[120%]">{title}</h6>
         <span>({date})</span>
       </div>
     </a>
