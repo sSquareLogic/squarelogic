@@ -18,7 +18,7 @@ const Selected = () => {
             />
           </AnimatedImage>
           <div className="flex items-center justify-between gap-6 text-lg font-medium">
-            <span>Custom</span>
+            <span>Eso Martin</span>
             <h6>A portfolio website for a fitness coach</h6>
             <span>(2022)</span>
           </div>

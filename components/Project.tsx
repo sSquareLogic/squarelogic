@@ -3,6 +3,7 @@ import Image from "next/image";
 import Tag from "./Tag";
 
 interface IProps {
+  name: string;
   title: string;
   date: string;
   tags: string[];
@@ -10,7 +11,7 @@ interface IProps {
   link: string;
 }
 
-const Project = ({ date, tags, title, image }: IProps) => {
+const Project = ({ date, tags, title, image, name }: IProps) => {
   return (
     <a href="" target="_blank" className="flex flex-col gap-4">
       <div className="project relative rounded-[24px] overflow-hidden">
@@ -30,7 +31,7 @@ const Project = ({ date, tags, title, image }: IProps) => {
         </div>
       </div>
       <div className="flex items-center justify-between gap-6 text-lg font-medium">
-        <span>Custom</span>
+        <span>{name}</span>
         <h6>{title}</h6>
         <span>({date})</span>
       </div>

@@ -103,7 +103,7 @@ const WorkflowItem = ({ container, order, item, setActiveItem }: IWorkflowItemPr
       >
         <h6 className="text-[64px] font-bold max-md:text-[56px] max-sm:text-[48px]">{item.title}</h6>
         <motion.p
-          className="text-[32px] font-medium overflow-hidden max-md:text-2xl max-sm:text-lg"
+          className="text-[32px] leading-[140%] overflow-hidden max-md:text-2xl max-sm:text-lg"
           initial={{ height: 0 }}
           custom={1}
           animate={controls}
