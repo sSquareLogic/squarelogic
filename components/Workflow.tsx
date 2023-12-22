@@ -121,8 +121,6 @@ const Workflow = () => {
   const itemRef = useRef<HTMLDivElement>(null);
   const [activeItem, setActiveItem] = useState<number>(0);
 
-  console.log(activeItem);
-
   return (
     <section className="workflow" style={{ height: `${height}vh` }} ref={containerRef}>
       <div className="custom-container max-w-[1384px] px-8 mx-auto w-full h-full max-lg:px-5 max-md:px-4">
@@ -137,8 +135,11 @@ const Workflow = () => {
             ease: "easeOut",
           }}
         >
-          <div className="relative grid grid-cols-ABOUT gap-20 max-md:flex max-md:flex-col max-md:gap-4">
-            <span className="text-lg font-medium">(Our workflow)</span>
+          <div className="relative grid grid-cols-ABOUT gap-20 max-md:flex max-md:flex-col max-md:gap-8">
+            <div className="flex flex-col gap-6 max-md:gap-4">
+              <span className="text-lg font-medium">(Our workflow)</span>
+              <h6 className="text-[40px] font-bold max-md:text-[32px]">Explore our workflow</h6>
+            </div>
             <div ref={itemRef} className="flex flex-col gap-10">
               {items.map((item, i) => (
                 <WorkflowItem key={i} item={item} container={containerRef} order={i} setActiveItem={setActiveItem} />
