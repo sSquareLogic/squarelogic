@@ -30,10 +30,13 @@ const Project = ({ date, tags, title, image, name }: IProps) => {
           ))}
         </div>
       </div>
-      <div className="flex items-center justify-between gap-6 text-lg font-medium">
-        <span>{name}</span>
-        <h6 className="leading-[120%]">{title}</h6>
-        <span>({date})</span>
+      <div className="flex flex-col gap-4">
+        <div className="flex items-center justify-between gap-6 text-lg font-medium">
+          <span>{name}</span>
+          <h6 className="leading-[120%] max-md:hidden">{title}</h6>
+          <span>({date})</span>
+        </div>
+        <h6 className="hidden leading-[120%] border-t border-solid border-BLACK3 pt-4 max-md:block">{title}</h6>
       </div>
     </a>
   );
