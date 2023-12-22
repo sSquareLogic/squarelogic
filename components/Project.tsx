@@ -6,7 +6,7 @@ interface IProps {
   name: string;
   title: string;
   date: string;
-  tags: string[];
+  tags?: string[];
   image: any;
   link: string;
 }
@@ -25,9 +25,7 @@ const Project = ({ date, tags, title, image, name }: IProps) => {
           />
         </AnimatedImage>
         <div className="tags absolute top-4 right-4 flex items-center gap-2">
-          {tags.map((tag, i) => (
-            <Tag tag={tag} key={i} />
-          ))}
+          {tags ? tags.map((tag, i) => <Tag tag={tag} key={i} />) : null}
         </div>
       </div>
       <div className="flex flex-col gap-4">

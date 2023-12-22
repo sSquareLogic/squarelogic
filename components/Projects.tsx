@@ -10,7 +10,6 @@ const Projects = () => {
           <Project
             link="https://duggthevicious.com"
             date="2023"
-            tags={["design", "portfolio"]}
             image={"/duggthevicious.png"}
             name="Dugg the Vicious"
             title="A portfolio website for a web developer"
@@ -18,7 +17,6 @@ const Projects = () => {
           <Project
             link="https://makecentsnow.com"
             date="2023"
-            tags={["design", "development", "currency"]}
             image={"/makecents.png"}
             name="Make Cents Now"
             title="App to stop the hassle of coins in your pocket & around the house."

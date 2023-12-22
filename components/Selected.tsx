@@ -17,10 +17,15 @@ const Selected = () => {
               className="w-full max-h-[742px] h-full object-cover rounded-[24px] transition-all hover:scale-[105%] ease-out duration-500"
             />
           </AnimatedImage>
-          <div className="flex items-center justify-between gap-6 text-lg font-medium">
-            <span>Eso Martin</span>
-            <h6>A portfolio website for a fitness coach</h6>
-            <span>(2022)</span>
+          <div className="flex flex-col gap-4">
+            <div className="flex items-center justify-between gap-6 text-lg font-medium">
+              <span>Eso Martin</span>
+              <h6 className="leading-[120%] max-md:hidden">A portfolio website for a fitness coach</h6>
+              <span>(2023)</span>
+            </div>
+            <h6 className="hidden leading-[120%] border-t border-solid border-BLACK3 pt-4 max-md:block">
+              A portfolio website for a fitness coach
+            </h6>
           </div>
         </Container>
       </a>

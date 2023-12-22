@@ -62,7 +62,7 @@ const MouseFollower = () => {
               }
             : followerState === "hoveringNav"
             ? {
-                backgroundColor: colors.GRAY,
+                backgroundColor: colors.OPAQUE,
               }
             : {}
         }
