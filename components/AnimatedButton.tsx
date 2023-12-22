@@ -7,9 +7,10 @@ interface IProps {
   onClick?: () => void;
   link?: string;
   name: string;
+  width?: "w-full" | "w-fit";
 }
 
-const AnimatedButton = ({ name, onClick, link }: IProps) => {
+const AnimatedButton = ({ name, onClick, link, width = "w-fit" }: IProps) => {
   const variants = {
     rest: {
       height: "0%",
@@ -26,12 +27,14 @@ const AnimatedButton = ({ name, onClick, link }: IProps) => {
         onClick={onClick}
         initial="rest"
         whileHover="active"
-        className="relative w-fit py-4 px-6 rounded-[70px] border-WHITE border-solid border text-lg font-medium"
+        className={`relative ${width} py-4 px-6 rounded-[70px] border-WHITE border-solid border text-lg font-medium`}
       >
-        {name}
+        <span className={`block ${width === "w-full" ? "text-center" : "text-left"}`}>{name}</span>
         <motion.div
           variants={variants}
-          className="absolute top-[50%] left-0 w-full h-0 -translate-y-[50%] bg-WHITE text-BLACK z-[51] flex items-center justify-center overflow-hidden pointer-events-none"
+          className={`absolute top-[50%] left-0 w-full h-0 -translate-y-[50%] bg-WHITE text-BLACK z-[51] flex items-center justify-center overflow-hidden pointer-events-none ${
+            width === "w-full" ? "text-center" : "text-left"
+          }`}
         >
           {name}
         </motion.div>
@@ -43,12 +46,14 @@ const AnimatedButton = ({ name, onClick, link }: IProps) => {
       type="button"
       initial="rest"
       whileHover="active"
-      className="relative w-fit py-4 px-6 rounded-[70px] border-WHITE border-solid border text-lg font-medium"
+      className={`relative ${width} py-4 px-6 rounded-[70px] border-WHITE border-solid border text-lg font-medium`}
     >
-      {name}
+      <span className={`block ${width === "w-full" ? "text-center" : "text-left"}`}>{name}</span>
       <motion.div
         variants={variants}
-        className="absolute top-[50%] left-0 w-full h-0 -translate-y-[50%] bg-WHITE text-BLACK z-[51] flex items-center justify-center overflow-hidden pointer-events-none"
+        className={`absolute top-[50%] left-0 w-full h-0 -translate-y-[50%] bg-WHITE text-BLACK z-[51] flex items-center justify-center overflow-hidden pointer-events-none ${
+          width === "w-full" ? "text-center" : "text-left"
+        }`}
       >
         {name}
       </motion.div>
