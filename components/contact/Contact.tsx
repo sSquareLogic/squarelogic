@@ -1,5 +1,5 @@
-import AnimatedButton from "./AnimatedButton";
-import Container from "./Container";
+import ContactBtn from "./ContactBtn";
+import Container from "../Container";
 
 const Contact = () => {
   return (
@@ -14,11 +14,7 @@ const Contact = () => {
             <p className="leading-[120%]">Looking to grow your business through the power of great digital design?</p>
             <p className="leading-[120%]">Reach out to get the conversation started about your digital design needs.</p>
           </div>
-          <AnimatedButton
-            width="w-full"
-            name="squarelogic.business@gmail.com"
-            link="mailto:squarelogic.business@gmail.com"
-          />
+          <ContactBtn />
         </div>
       </Container>
     </section>
