@@ -1,5 +1,5 @@
-import AnimatedButton from "./AnimatedButton";
-import Container from "./Container";
+import AnimatedButton from "@/components/animated/AnimatedButton";
+import Container from "@/components/Container";
 import Project from "./Project";
 
 const Projects = () => {

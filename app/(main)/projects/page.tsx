@@ -1,4 +1,4 @@
-import Hero from "@/components/Hero";
+import Hero from "@/components/hero/Hero";
 import { Metadata } from "next";
 import ProjectsShow from "@/components/projects/ProjectsShow";
 

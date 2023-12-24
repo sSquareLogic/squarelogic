@@ -1,4 +1,4 @@
-import AnimatedImage from "../AnimatedImage";
+import AnimatedImage from "../animated/AnimatedImage";
 import Image from "next/image";
 
 interface IProps {

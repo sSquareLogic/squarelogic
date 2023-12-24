@@ -1,5 +1,5 @@
-import Container from "./Container";
-import ParallaxText from "./ParralaxText";
+import Container from "../Container";
+import ParallaxText from "../animated/ParralaxText";
 import ToTopBtn from "./ToTopBtn";
 
 const Footer = () => {

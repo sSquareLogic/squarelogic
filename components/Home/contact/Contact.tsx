@@ -1,5 +1,5 @@
 import ContactBtn from "./ContactBtn";
-import Container from "../Container";
+import Container from "@/components/Container";
 
 const Contact = () => {
   return (

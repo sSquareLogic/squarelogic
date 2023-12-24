@@ -1,11 +1,11 @@
-import About from "@/components/About";
-import Contact from "@/components/contact/Contact";
-import FAQ from "@/components/faq/FAQ";
-import Hero from "@/components/Hero";
+import About from "@/components/Home/about/About";
+import Contact from "@/components/Home/contact/Contact";
+import FAQ from "@/components/Home/faq/FAQ";
+import Hero from "@/components/hero/Hero";
 import Plans from "@/components/Plans";
-import Projects from "@/components/Projects";
-import Selected from "@/components/Selected";
-import Workflow from "@/components/Workflow";
+import Projects from "@/components/Home/projects/Projects";
+import Selected from "@/components/Home/selected/Selected";
+import Workflow from "@/components/Home/workflow/Workflow";
 
 export default function Home() {
   const hero =

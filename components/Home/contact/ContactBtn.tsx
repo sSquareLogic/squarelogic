@@ -1,6 +1,6 @@
 "use client";
 
-import AnimatedButton from "../AnimatedButton";
+import AnimatedButton from "@/components/animated/AnimatedButton";
 import { useMediaQuery } from "usehooks-ts";
 
 const ContactBtn = () => {

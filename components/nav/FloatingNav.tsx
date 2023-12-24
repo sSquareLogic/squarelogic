@@ -1,10 +1,10 @@
 "use client";
 
-import {  motion } from "framer-motion";
 import { useContext, useState } from "react";
 
 import { AnimationContext } from "@/context/AnimationContext";
 import NavLink from "./NavLink";
+import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 
 const navLinks = [

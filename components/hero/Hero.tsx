@@ -2,8 +2,8 @@
 
 import { motion, useInView } from "framer-motion";
 
-import AnimatedTextWord from "./AnimatedTextWord";
-import Container from "./Container";
+import AnimatedTextWord from "@/components/animated/AnimatedTextWord";
+import Container from "@/components/Container";
 import TopText from "./TopText";
 import { useRef } from "react";
 

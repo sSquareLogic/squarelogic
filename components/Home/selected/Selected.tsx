@@ -1,5 +1,5 @@
-import AnimatedImage from "./AnimatedImage";
-import Container from "./Container";
+import AnimatedImage from "@/components/animated/AnimatedImage";
+import Container from "@/components/Container";
 import Image from "next/image";
 
 const Selected = () => {
