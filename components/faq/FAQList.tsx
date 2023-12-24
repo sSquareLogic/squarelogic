@@ -26,7 +26,7 @@ const FAQList = () => {
   return (
     <ul className="flex flex-col gap-6">
       {faqlist.map((faq, i) => (
-        <FAQItem key={i} description={faq.description} title={faq.title} />
+        <FAQItem key={i} description={faq.description} title={faq.title} position={i} />
       ))}
     </ul>
   );

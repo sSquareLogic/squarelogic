@@ -11,7 +11,7 @@ interface IPlusMinusProps {
 const PlusMinus = ({ isOpen }: IPlusMinusProps) => {
   return (
     <motion.div
-      className="rounded-full w-8 h-8 relative"
+      className="rounded-full w-8 h-8 min-w-8 relative"
       transition={defaultTransition}
       initial={{ background: colors.WHITE, rotate: "0deg" }}
       animate={isOpen ? { background: colors.ACCENT, rotate: "90deg" } : {}}
