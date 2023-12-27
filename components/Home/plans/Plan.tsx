@@ -36,7 +36,10 @@ const Plan = ({ accent, description, name, features, price }: IProps) => {
                 per month
               </span>
             </div>
-            <p className="text-lg text-WHITE max-sm:text-base" style={accent ? { color: colors.BLACK } : {}}>
+            <p
+              className="text-lg text-WHITE leading-[140%] max-sm:text-base"
+              style={accent ? { color: colors.BLACK } : {}}
+            >
               {description}
             </p>
           </div>
