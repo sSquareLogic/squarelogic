@@ -1,19 +1,11 @@
-"use client";
-
-import { PropsWithChildren, useContext } from "react";
-
-import { AnimationContext } from "@/context/AnimationContext";
+import CursorHover from "./CursorHover";
+import { PropsWithChildren } from "react";
 
 const AnimatedImage = ({ children }: PropsWithChildren) => {
-  const { setFollowerState } = useContext(AnimationContext);
   return (
-    <div
-      className="rounded-[24px] overflow-hidden"
-      onMouseOver={() => setFollowerState("hoveringImage")}
-      onMouseLeave={() => setFollowerState("default")}
-    >
-      {children}
-    </div>
+    <CursorHover>
+      <div className="rounded-[24px] overflow-hidden">{children}</div>
+    </CursorHover>
   );
 };
 export default AnimatedImage;

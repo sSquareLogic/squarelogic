@@ -1,5 +1,6 @@
 "use client";
 
+import CursorHover from "./CursorHover";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -22,9 +23,31 @@ const AnimatedButton = ({ name, onClick, link, width = "w-fit" }: IProps) => {
     },
   };
   return link ? (
-    <Link href={link || "/"}>
-      <motion.div
+    <CursorHover>
+      <Link href={link || "/"}>
+        <motion.div
+          onClick={onClick}
+          initial="rest"
+          whileHover="active"
+          className={`relative ${width} py-4 px-6 rounded-[70px] border-WHITE border-solid border text-lg font-medium`}
+        >
+          <span className={`block ${width === "w-full" ? "text-center" : "text-left"}`}>{name}</span>
+          <motion.div
+            variants={variants}
+            className={`absolute top-[50%] left-0 w-full h-0 -translate-y-[50%] bg-WHITE text-BLACK flex items-center justify-center overflow-hidden pointer-events-none ${
+              width === "w-full" ? "text-center" : "text-left"
+            }`}
+          >
+            {name}
+          </motion.div>
+        </motion.div>
+      </Link>
+    </CursorHover>
+  ) : (
+    <CursorHover>
+      <motion.button
         onClick={onClick}
+        type="button"
         initial="rest"
         whileHover="active"
         className={`relative ${width} py-4 px-6 rounded-[70px] border-WHITE border-solid border text-lg font-medium`}
@@ -32,32 +55,14 @@ const AnimatedButton = ({ name, onClick, link, width = "w-fit" }: IProps) => {
         <span className={`block ${width === "w-full" ? "text-center" : "text-left"}`}>{name}</span>
         <motion.div
           variants={variants}
-          className={`absolute top-[50%] left-0 w-full h-0 -translate-y-[50%] bg-WHITE text-BLACK z-[51] flex items-center justify-center overflow-hidden pointer-events-none ${
+          className={`absolute top-[50%] left-0 w-full h-0 -translate-y-[50%] bg-WHITE text-BLACK flex items-center justify-center overflow-hidden pointer-events-none ${
             width === "w-full" ? "text-center" : "text-left"
           }`}
         >
           {name}
         </motion.div>
-      </motion.div>
-    </Link>
-  ) : (
-    <motion.button
-      onClick={onClick}
-      type="button"
-      initial="rest"
-      whileHover="active"
-      className={`relative ${width} py-4 px-6 rounded-[70px] border-WHITE border-solid border text-lg font-medium`}
-    >
-      <span className={`block ${width === "w-full" ? "text-center" : "text-left"}`}>{name}</span>
-      <motion.div
-        variants={variants}
-        className={`absolute top-[50%] left-0 w-full h-0 -translate-y-[50%] bg-WHITE text-BLACK z-[51] flex items-center justify-center overflow-hidden pointer-events-none ${
-          width === "w-full" ? "text-center" : "text-left"
-        }`}
-      >
-        {name}
-      </motion.div>
-    </motion.button>
+      </motion.button>
+    </CursorHover>
   );
 };
 export default AnimatedButton;

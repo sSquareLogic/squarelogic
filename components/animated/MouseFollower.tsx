@@ -53,12 +53,14 @@ const MouseFollower = () => {
         initial={{
           width: cursorSize,
           height: cursorSize,
+          mixBlendMode: "exclusion",
         }}
         animate={
           followerState === "hoveringImage"
             ? {
                 width: 110,
                 height: 110,
+                // mixBlendMode: "exclusion",
               }
             : followerState === "hoveringNav"
             ? {
