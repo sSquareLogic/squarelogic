@@ -8,15 +8,15 @@ import { useMediaQuery } from "usehooks-ts";
 import { useState } from "react";
 
 export interface IFAQItem {
-  title: string;
-  description: string;
+  q: string;
+  a: string;
 }
 
 interface IFAQItemProps extends IFAQItem {
   position: number;
 }
 
-const FAQItem = ({ description, title, position }: IFAQItemProps) => {
+const FAQItem = ({ a, q, position }: IFAQItemProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(position === 0);
   const breakpoints = {
     sm: useMediaQuery("(max-width: 640px)"),
@@ -35,7 +35,7 @@ const FAQItem = ({ description, title, position }: IFAQItemProps) => {
           initial={{ color: colors.WHITE }}
           animate={isOpen ? { color: colors.ACCENT } : {}}
         >
-          {title}
+          {q}
         </motion.h2>
         <PlusMinus isOpen={isOpen} />
       </div>
@@ -47,7 +47,7 @@ const FAQItem = ({ description, title, position }: IFAQItemProps) => {
           isOpen ? { opacity: 1, height: "fit-content", marginTop: breakpoints.sm ? 24 : breakpoints.md ? 32 : 40 } : {}
         }
       >
-        {description}
+        {a}
       </motion.p>
     </div>
   );
