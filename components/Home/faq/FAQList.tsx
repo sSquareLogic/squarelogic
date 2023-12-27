@@ -8,7 +8,7 @@ const FAQList = () => {
     },
     {
       q: "What payment methods do you accept?",
-      a: "We accept PayPal, Wise, Revolut, and crypto",
+      a: "We accept PayPal, Wise, Revolut, and crypto.",
     },
     {
       q: "How much experience do you have?",
@@ -16,7 +16,7 @@ const FAQList = () => {
     },
     {
       q: "How does onboarding happen?",
-      a: "We will have a call where will will ask you questions about your project. If we agree to work together, we will send you a form to fill out. After that, we will start working on your project.",
+      a: "We will have a call where we will ask you questions about your project. If we agree to work together, we will send you a form to fill out within 24 hours. After that, we will start working on your project.",
     },
     {
       q: "What does unlimited features mean?",
