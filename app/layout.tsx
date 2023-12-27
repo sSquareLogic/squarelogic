@@ -1,10 +1,13 @@
 import "./globals.css";
 
-import type { Metadata } from "next";
+import { IProfile, getProfileData } from "@/sanity/schemas/profile";
+
 import Script from "next/script";
 import { Space_Grotesk } from "next/font/google";
 import { URL } from "url";
+import blocksToText from "@/sanity/lib/portableToText";
 import colors from "@/settings/colors";
+import { urlForImage } from "@/sanity/lib/image";
 
 const spacegr = Space_Grotesk({ subsets: ["latin"] });
 
@@ -16,40 +19,31 @@ export const viewport = {
   colorScheme: "only light",
 };
 
-export const metadata: Metadata = {
-  applicationName: "squarelogic.space",
-  metadataBase: new URL("https://squarelogic.space"),
-  keywords: [
-    "Responsive Web Design",
-    "UX Design",
-    "SEO Techniques",
-    "Front-end Development",
-    "Mobile-Friendly Design",
-    "Web Development Services",
-    "Website Redesign",
-    "E-commerce Development",
-    "Custom Web Design",
-    "CMS Implementation",
-  ],
-  title: "SquareLogic | Web design & development agency",
-  description:
-    "We are a team of enthusiastic designers and developers. We specialize in UI/UX design and web development.",
-  twitter: {
-    title: "SquareLogic",
-    description:
-      "We are a team of enthusiastic designers and developers. We specialize in UI/UX design and web development.",
-    site: "SquareLogic",
-    card: "summary_large_image",
-    images: ["/summary_large_image.png"],
-  },
-  openGraph: {
-    title: "SquareLogic",
-    type: "website",
-    description:
-      "We are a team of enthusiastic designers and developers. We specialize in UI/UX design and web development.",
-    siteName: "SquareLogic",
-    images: ["/summary_large_image.png"],
-  },
+export const generateMetadata = async () => {
+  const profileData = (await getProfileData()) as IProfile[];
+  const description = blocksToText(profileData[0].description);
+  return {
+    applicationName: "squarelogic.space",
+    metadataBase: new URL("https://squarelogic.space"),
+    keywords: profileData[0].keywords,
+    title: profileData[0].name,
+    description: description,
+
+    twitter: {
+      title: profileData[0].short_name,
+      description: description,
+      site: profileData[0].short_name,
+      card: "summary_large_image",
+      images: [urlForImage(profileData[0].summary_card).url()],
+    },
+    openGraph: {
+      title: profileData[0].short_name,
+      description: description,
+      images: [urlForImage(profileData[0].summary_card).url()],
+      type: "website",
+      site: profileData[0].short_name,
+    },
+  };
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -58,12 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${spacegr.className} text-WHITE bg-BLACK`}>{children}</body>
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-J5G9E3MEJJ"></Script>
       <Script id="google-analytics">
-        {`
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-J5G9E3MEJJ');`}
+        {`window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-J5G9E3MEJJ');`}
       </Script>
     </html>
   );
