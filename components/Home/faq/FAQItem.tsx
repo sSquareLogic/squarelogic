@@ -1,22 +1,21 @@
 "use client";
 
+import { IFAQ } from "@/sanity/schemas/home";
 import PlusMinus from "./PlusMinus";
+import { PortableText } from "@portabletext/react";
 import colors from "@/settings/colors";
 import defaultTransition from "@/settings/transition";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "usehooks-ts";
 import { useState } from "react";
 
-export interface IFAQItem {
-  q: string;
-  a: string;
-}
+type FAQItemListType = IFAQ["items"][any];
 
-interface IFAQItemProps extends IFAQItem {
+interface IFAQItemProps extends FAQItemListType {
   position: number;
 }
 
-const FAQItem = ({ a, q, position }: IFAQItemProps) => {
+const FAQItem = ({ answer, position, question }: IFAQItemProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(position === 0);
   const breakpoints = {
     sm: useMediaQuery("(max-width: 640px)"),
@@ -35,11 +34,11 @@ const FAQItem = ({ a, q, position }: IFAQItemProps) => {
           initial={{ color: colors.WHITE }}
           animate={isOpen ? { color: colors.ACCENT } : {}}
         >
-          {q}
+          {question}
         </motion.h2>
         <PlusMinus isOpen={isOpen} />
       </div>
-      <motion.p
+      <motion.div
         className="text-WHITE leading-[120%] overflow-hidden text-lg max-[450px]:text-base"
         transition={defaultTransition}
         initial={{ opacity: 0, height: 0, marginTop: 0 }}
@@ -47,8 +46,8 @@ const FAQItem = ({ a, q, position }: IFAQItemProps) => {
           isOpen ? { opacity: 1, height: "fit-content", marginTop: breakpoints.sm ? 24 : breakpoints.md ? 32 : 40 } : {}
         }
       >
-        {a}
-      </motion.p>
+        <PortableText value={answer} />
+      </motion.div>
     </div>
   );
 };

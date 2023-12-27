@@ -1,16 +1,19 @@
 import AnimatedImage from "@/components/animated/AnimatedImage";
 import Container from "@/components/Container";
+import { ISelectedWork } from "@/sanity/schemas/home";
 import Image from "next/image";
+import { PortableText } from "@portabletext/react";
+import { urlForImage } from "@/sanity/lib/image";
 
-const Selected = () => {
+const Selected = ({ description, image, link, project_name, year }: ISelectedWork) => {
   return (
     <section className="selected">
-      <a href="https://esomartin.vercel.app" target="_blank">
+      <a href={link} target="_blank">
         <Container className="flex flex-col gap-4">
           <h6 className="text-lg font-medium">(Selected work)</h6>
           <AnimatedImage>
             <Image
-              src={"/esomartin.png"}
+              src={urlForImage(image).url()}
               alt="Selected work image"
               width={1320}
               height={742}
@@ -19,13 +22,15 @@ const Selected = () => {
           </AnimatedImage>
           <div className="flex flex-col gap-4">
             <div className="flex items-center justify-between gap-6 text-lg font-medium">
-              <span>Eso Martin</span>
-              <h6 className="leading-[120%] max-md:hidden">A portfolio website for a fitness coach</h6>
-              <span>(2023)</span>
+              <span>{project_name}</span>
+              <div className="leading-[120%] max-md:hidden">
+                <PortableText value={description} />
+              </div>
+              <span>({year})</span>
             </div>
-            <h6 className="hidden leading-[120%] border-t border-solid border-BLACK3 pt-4 max-md:block">
-              A portfolio website for a fitness coach
-            </h6>
+            <div className="hidden leading-[120%] border-t border-solid border-BLACK3 pt-4 max-md:block">
+              <PortableText value={description} />
+            </div>
           </div>
         </Container>
       </a>

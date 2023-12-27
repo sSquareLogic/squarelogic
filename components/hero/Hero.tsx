@@ -4,17 +4,13 @@ import { motion, useInView } from "framer-motion";
 
 import AnimatedTextWord from "@/components/animated/AnimatedTextWord";
 import Container from "@/components/Container";
+import { IHero } from "@/sanity/schemas/home";
 import TopText from "./TopText";
+import blocksToText from "@/sanity/lib/portableToText";
 import { useRef } from "react";
 
-interface IProps {
-  text: string;
-}
-
-const Hero = ({ text }: IProps) => {
-  const name = "SQUARELOGIC";
-
-  const middle = Math.ceil(name.length / 2);
+const Hero = ({ description, title }: IHero) => {
+  const middle = Math.ceil(title.length / 2);
   const ref = useRef<HTMLDivElement>(null);
   const isBigTextInView = useInView(ref);
   return (
@@ -25,7 +21,7 @@ const Hero = ({ text }: IProps) => {
           ref={ref}
           className="font-bold text-center whitespace-nowrap text-[14.8vw] leading-[115%] uppercase w-full overflow-hidden"
         >
-          {name.split("").map((char, i) => {
+          {title.split("").map((char, i) => {
             const distance = Math.abs(middle - (i + 1));
             const delay = distance * 0.3;
             return (
@@ -60,7 +56,7 @@ const Hero = ({ text }: IProps) => {
                 : {}
             }
           >
-            <AnimatedTextWord text={text} />
+            <AnimatedTextWord text={blocksToText(description)} />
           </motion.div>
         </Container>
       </div>

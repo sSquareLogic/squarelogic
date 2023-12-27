@@ -1,15 +1,12 @@
 import CursorHover from "@/components/animated/CursorHover";
+import { IPricing } from "@/sanity/schemas/home";
 import Image from "next/image";
+import { PortableText } from "@portabletext/react";
 import colors from "@/settings/colors";
 
-export interface IPlan {
-  name: string;
-  price?: string;
-  features?: string[];
-  description: string;
-}
+type PricingItemsListElementType = IPricing["items"][any];
 
-interface IProps extends IPlan {
+interface IProps extends PricingItemsListElementType {
   accent?: boolean;
 }
 
@@ -36,12 +33,12 @@ const Plan = ({ accent, description, name, features, price }: IProps) => {
                 per month
               </span>
             </div>
-            <p
+            <div
               className="text-lg text-WHITE leading-[140%] max-sm:text-base"
               style={accent ? { color: colors.BLACK } : {}}
             >
-              {description}
-            </p>
+              <PortableText value={description} />
+            </div>
           </div>
         ) : (
           <div className="flex flex-col gap-6 pb-20">
@@ -51,9 +48,9 @@ const Plan = ({ accent, description, name, features, price }: IProps) => {
             >
               {name}
             </span>
-            <p className="text-lg text-WHITE max-sm:text-base" style={accent ? { color: colors.BLACK } : {}}>
-              {description}
-            </p>
+            <div className="text-lg text-WHITE max-sm:text-base" style={accent ? { color: colors.BLACK } : {}}>
+              <PortableText value={description} />
+            </div>
           </div>
         )}
       </div>
