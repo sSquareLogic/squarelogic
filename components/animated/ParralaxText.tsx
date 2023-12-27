@@ -10,6 +10,7 @@ import {
   useVelocity,
 } from "framer-motion";
 
+import CursorHover from "./CursorHover";
 import { useRef } from "react";
 import { wrap } from "@motionone/utils";
 
@@ -48,14 +49,16 @@ const ParallaxText = ({ children, baseVelocity = 100 }: ParallaxProps) => {
   });
 
   return (
-    <div className="parallax text-[160px] font-bold uppercase max-md:text-[14vw] overflow-hidden m-0 whitespace-nowrap flex flex-nowrap">
-      <motion.div className="scroller uppercase flex flex-nowrap" style={{ x }}>
-        <span className="block mr-20 max-md:mr-10">{children}</span>
-        <span className="block mr-20 max-md:mr-6">{children}</span>
-        <span className="block mr-20 max-md:mr-6">{children}</span>
-        <span className="block mr-20 max-md:mr-6">{children}</span>
-      </motion.div>
-    </div>
+    <CursorHover>
+      <div className="parallax text-[160px] font-bold uppercase max-md:text-[14vw] overflow-hidden m-0 whitespace-nowrap flex flex-nowrap">
+        <motion.div className="scroller uppercase flex flex-nowrap" style={{ x }}>
+          <span className="block mr-20 max-md:mr-10">{children}</span>
+          <span className="block mr-20 max-md:mr-6">{children}</span>
+          <span className="block mr-20 max-md:mr-6">{children}</span>
+          <span className="block mr-20 max-md:mr-6">{children}</span>
+        </motion.div>
+      </div>
+    </CursorHover>
   );
 };
 
