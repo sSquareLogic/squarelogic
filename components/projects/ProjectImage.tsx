@@ -1,19 +1,15 @@
 import AnimatedImage from "../animated/AnimatedImage";
+import { IProjects } from "@/sanity/schemas/projects";
 import Image from "next/image";
+import blocksToText from "@/sanity/lib/portableToText";
+import { urlForImage } from "@/sanity/lib/image";
 
-interface IProps {
-  src: string;
-  title: string;
-  description: string;
-  link: string;
-}
-
-const ProjectImage = ({ src, description, title, link }: IProps) => {
+const ProjectImage = ({ image, description, project_name, link }: IProjects["projects"]["projects"]["row_1"][any]) => {
   return (
     <a href={link} target="_blank" className="projects-row flex flex-col gap-6">
       <AnimatedImage>
         <Image
-          src={src}
+          src={urlForImage(image).url()}
           alt="Project image"
           unoptimized
           width={600}
@@ -22,7 +18,7 @@ const ProjectImage = ({ src, description, title, link }: IProps) => {
         />
       </AnimatedImage>
       <p className="text-2xl">
-        <span className="font-bold">{title}</span> - {description}
+        <span className="font-bold">{project_name}</span> - {blocksToText(description)}
       </p>
     </a>
   );
