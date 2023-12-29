@@ -3,6 +3,7 @@ import { IHome, getHomeData } from "@/sanity/schemas/home";
 import About from "@/components/Home/about/About";
 import Contact from "@/components/Home/contact/Contact";
 import FAQ from "@/components/Home/faq/FAQ";
+import Features from "@/components/Home/features/Features";
 import Hero from "@/components/hero/Hero";
 import Plans from "@/components/Home/plans/Plans";
 import Projects from "@/components/Home/projects/Projects";
@@ -20,6 +21,7 @@ const Home = async () => {
         <Selected {...selected_work} />
         <About {...about_us} />
         <Projects {...projects} />
+        <Features />
         <Workflow {...workflow} />
         <FAQ {...faq} />
         <Plans {...pricing} />
