@@ -58,6 +58,7 @@ const Plan = ({ accent, description, name, features, price }: IProps) => {
         <CursorHover>
           <a
             href={"https://calendly.com/mikejames1311005/squarelogic"}
+            target="_blank"
             className="block rounded-[56px] w-full bg-ACCENT text-center py-4 px-6 text-BLACK font-bold text-lg"
             style={accent ? { background: colors.BLACK, color: colors.WHITE } : {}}
           >
