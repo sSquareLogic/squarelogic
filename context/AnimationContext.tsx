@@ -3,7 +3,7 @@
 import { Dispatch, PropsWithChildren, SetStateAction, createContext, useMemo, useState } from "react";
 
 interface IAnimationContext {
-  followerState: "default" | "hoveringImage" | "hoveringNav";
+  followerState: "default" | "link" | "loop";
   setFollowerState: Dispatch<SetStateAction<IAnimationContext["followerState"]>>;
 }
 

@@ -44,8 +44,8 @@ const FloatingNav = () => {
   const { setFollowerState } = useContext(AnimationContext);
   return (
     <motion.nav
-      className="floating-nav bg-NAV max-w-fit py-[18.5px] fixed bottom-[25px] rounded-[54px] backdrop-blur-sm z-[100] left-[50%] -translate-x-[50%]"
-      onMouseEnter={() => setFollowerState("hoveringNav")}
+      className="floating-nav bg-NAV max-w-fit py-[18.5px] fixed bottom-[25px] rounded-[54px] backdrop-blur-sm z-40 left-[50%] -translate-x-[50%]"
+      onMouseEnter={() => setFollowerState("link")}
       onMouseLeave={() => {
         setFollowerState("default");
         setTimeout(() => {

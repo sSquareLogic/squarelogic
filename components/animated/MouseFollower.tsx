@@ -5,13 +5,14 @@ import { useContext, useRef } from "react";
 
 import { AnimationContext } from "@/context/AnimationContext";
 import Image from "next/image";
-import colors from "@/settings/colors";
 import { useEffect } from "react";
 
 const MouseFollower = () => {
   const { followerState } = useContext(AnimationContext);
+  const isLink = followerState === "link";
+  const isLoop = followerState === "loop";
 
-  const cursorSize = followerState === "hoveringImage" ? 110 : 16;
+  const cursorSize = isLink || isLoop ? 110 : 16;
   const mouse = {
     x: useMotionValue(0),
     y: useMotionValue(0),
@@ -53,18 +54,14 @@ const MouseFollower = () => {
         initial={{
           width: cursorSize,
           height: cursorSize,
-          mixBlendMode: "exclusion",
+          mixBlendMode: "difference",
         }}
         animate={
-          followerState === "hoveringImage"
+          isLink || isLoop
             ? {
                 width: 110,
                 height: 110,
                 // mixBlendMode: "exclusion",
-              }
-            : followerState === "hoveringNav"
-            ? {
-                backgroundColor: colors.OPAQUE,
               }
             : {}
         }
@@ -78,7 +75,7 @@ const MouseFollower = () => {
             duration: 0.2,
           }}
           animate={
-            followerState === "hoveringImage"
+            isLink
               ? {
                   opacity: 1,
                   transition: {

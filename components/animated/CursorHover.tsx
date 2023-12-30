@@ -5,10 +5,10 @@ import { PropsWithChildren, useContext } from "react";
 import { AnimationContext } from "@/context/AnimationContext";
 
 interface IProps extends PropsWithChildren {
-  state?: "hoveringImage" | "hoveringNav";
+  state?: "link" | "default";
 }
 
-const CursorHover = ({ children, state = "hoveringImage" }: IProps) => {
+const CursorHover = ({ children, state = "link" }: IProps) => {
   const { setFollowerState } = useContext(AnimationContext);
   return (
     <div
