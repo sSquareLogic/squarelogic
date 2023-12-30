@@ -1,11 +1,10 @@
 "use client";
 
+import { AnimationContext, FollowerState } from "@/context/AnimationContext";
 import { PropsWithChildren, useContext } from "react";
 
-import { AnimationContext } from "@/context/AnimationContext";
-
 interface IProps extends PropsWithChildren {
-  state?: "link" | "default";
+  state?: FollowerState;
 }
 
 const CursorHover = ({ children, state = "link" }: IProps) => {

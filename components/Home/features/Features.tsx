@@ -1,4 +1,5 @@
 import Container from "@/components/Container";
+import CursorHover from "@/components/animated/CursorHover";
 import Feature from "./Feature";
 import { IFeatures } from "@/sanity/schemas/home";
 
@@ -12,7 +13,9 @@ const Features = ({ features, subtitle }: IFeatures) => {
         </div>
         <div className="flex flex-col gap-6">
           {features.map((feature, i) => (
-            <Feature key={i} {...feature} accent={i === 1} />
+            <CursorHover key={i} state={"loop"}>
+              <Feature key={i} {...feature} accent={i === 1} />
+            </CursorHover>
           ))}
         </div>
       </Container>

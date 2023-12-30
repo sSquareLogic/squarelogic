@@ -54,7 +54,7 @@ const MouseFollower = () => {
         initial={{
           width: cursorSize,
           height: cursorSize,
-          mixBlendMode: "difference",
+          mixBlendMode: "exclusion",
         }}
         animate={
           isLink || isLoop
