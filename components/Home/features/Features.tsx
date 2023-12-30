@@ -14,7 +14,7 @@ const Features = ({ features, subtitle }: IFeatures) => {
         <div className="flex flex-col gap-6">
           {features.map((feature, i) => (
             <CursorHover key={i} state={"loop"}>
-              <Feature key={i} {...feature} accent={i === 1} />
+              <Feature {...feature} accent={i === 1} />
             </CursorHover>
           ))}
         </div>
