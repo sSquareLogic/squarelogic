@@ -1,10 +1,12 @@
+import { IFeatures } from "@/sanity/schemas/home";
 import Image from "next/image";
+import { PortableText } from "@portabletext/react";
 import colors from "@/settings/colors";
+import { urlForImage } from "@/sanity/lib/image";
 
-interface IProps {
-  name: string;
-  description: string;
-  icon: string;
+type IFeaturesItemType = IFeatures["features"][any];
+
+interface IProps extends IFeaturesItemType {
   accent?: boolean;
 }
 
@@ -19,7 +21,7 @@ const Feature = ({ name, description, icon, accent }: IProps) => {
         style={accent ? { background: colors.BLACK } : {}}
       >
         <Image
-          src={icon}
+          src={urlForImage(icon).url()}
           alt={name}
           width={48}
           height={48}
@@ -28,7 +30,9 @@ const Feature = ({ name, description, icon, accent }: IProps) => {
       </div>
       <div className="flex flex-col gap-6 max-sm:gap-4" style={accent ? { color: colors.BLACK } : {}}>
         <h6 className="text-2xl font-bold max-lg:text-xl">{name}</h6>
-        <p className="text-lg leading-[140%] max-lg:text-base">{description}</p>
+        <div className="text-lg leading-[140%] max-lg:text-base">
+          <PortableText value={description} />
+        </div>
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ import Workflow from "@/components/Home/workflow/Workflow";
 
 const Home = async () => {
   const home = (await getHomeData()) as IHome[];
-  const { about_us, contact_us, faq, hero, pricing, projects, selected_work, workflow } = home[0];
+  const { about_us, contact_us, faq, hero, pricing, projects, selected_work, workflow, features } = home[0];
 
   return (
     <>
@@ -21,7 +21,7 @@ const Home = async () => {
         <Selected {...selected_work} />
         <About {...about_us} />
         <Projects {...projects} />
-        <Features />
+        <Features {...features} />
         <Workflow {...workflow} />
         <FAQ {...faq} />
         <Plans {...pricing} />

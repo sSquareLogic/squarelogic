@@ -22,6 +22,15 @@ export interface IProjects {
   projects: { project_name: string; image: any; description: any; year: string; link: string }[];
 }
 
+export interface IFeatures {
+  subtitle: string;
+  features: {
+    name: string;
+    description: any;
+    icon: any;
+  }[];
+}
+
 export interface IWorkflow {
   subtitle: string;
   items: {
@@ -60,6 +69,7 @@ export interface IHome {
   selected_work: ISelectedWork;
   about_us: IAboutUs;
   projects: IProjects;
+  features: IFeatures;
   workflow: IWorkflow;
   faq: IFAQ;
   pricing: IPricing;
@@ -223,6 +233,55 @@ const home = {
                   description: "This is the link to the project.",
                   type: "string",
                   title: "Link",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "features",
+      description: "This section is about our features.",
+      type: "object",
+      title: "Features",
+      fields: [
+        {
+          name: "subtitle",
+          description: "This will be displayed under the title of this section.",
+          type: "string",
+          title: "Subtitle",
+        },
+        {
+          name: "features",
+          type: "array",
+          title: "Features",
+          of: [
+            {
+              type: "object",
+              fields: [
+                {
+                  name: "name",
+                  description: "This is the name of the feature.",
+                  type: "string",
+                  title: "Name",
+                },
+                {
+                  name: "description",
+                  description: "This is the description of the feature.",
+                  type: "array",
+                  title: "Description",
+                  of: [
+                    {
+                      type: "block",
+                    },
+                  ],
+                },
+                {
+                  name: "icon",
+                  description: "This is the icon of the feature.",
+                  type: "image",
+                  title: "Icon",
                 },
               ],
             },
