@@ -12,6 +12,7 @@ const MouseFollower = () => {
   const { followerState } = useContext(AnimationContext);
   const isLink = followerState === "link";
   const isLoop = followerState === "loop";
+  const isDisabled = followerState === "disabled";
 
   const cursorSize = isLink || isLoop ? 110 : 16;
   const mouse = {
@@ -62,6 +63,10 @@ const MouseFollower = () => {
                 width: 110,
                 height: 110,
                 mixBlendMode: "exclusion",
+              }
+            : isDisabled
+            ? {
+                opacity: 0,
               }
             : {}
         }

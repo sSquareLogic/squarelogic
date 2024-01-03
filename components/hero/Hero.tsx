@@ -32,7 +32,7 @@ const Hero = ({ description, title }: IHero) => {
                 key={i}
                 initial={{ y: "100%" }}
                 animate={{ y: "0%" }}
-                transition={defaultTransition}
+                transition={{ ...defaultTransition, delay: delay }}
               >
                 {char}
               </motion.span>
@@ -58,7 +58,7 @@ const Hero = ({ description, title }: IHero) => {
                 : {}
             }
           >
-            <AnimatedTextWord text={blocksToText(description)} />
+            <AnimatedTextWord text={typeof description === "string" ? description : blocksToText(description)} />
           </motion.div>
         </Container>
       </div>

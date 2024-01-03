@@ -2,7 +2,7 @@
 
 import { Dispatch, PropsWithChildren, SetStateAction, createContext, useMemo, useState } from "react";
 
-export type FollowerState = "default" | "link" | "loop";
+export type FollowerState = "default" | "link" | "loop" | "disabled";
 
 interface IAnimationContext {
   followerState: FollowerState;

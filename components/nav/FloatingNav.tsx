@@ -24,11 +24,11 @@ const navLinks = [
   //   link: "/about",
   //   path: "/about",
   // },
-  // {
-  //   name: "Contact",
-  //   link: "/contact",
-  //   path: "/contact",
-  // },
+  {
+    name: "Contact",
+    link: "/contact_us",
+    path: "/contact_us",
+  },
 ];
 
 const findPathName = (path: string): string | undefined => {
