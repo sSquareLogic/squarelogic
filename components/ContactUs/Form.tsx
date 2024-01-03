@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 
+import AnimatedButton from "../animated/AnimatedButton";
 import CustomInput from "./CustomInput";
 
 interface IFormValues {
@@ -22,7 +23,7 @@ const Form = () => {
   });
   return (
     <form className="flex flex-col gap-6" onSubmit={(e: FormEvent) => e.preventDefault()}>
-      <div className="flex items-center gap-6">
+      <div className="flex items-center gap-6 max-sm:flex-col">
         <CustomInput name="name" id="name" controller={createController("name")} placeholder="Your name" type="text" />
         <CustomInput
           name="email"
@@ -40,6 +41,9 @@ const Form = () => {
           placeholder="Your message"
           isTextArea
         />
+      </div>
+      <div className="pt-4">
+        <AnimatedButton name="Send your message" width="w-full" />
       </div>
     </form>
   );

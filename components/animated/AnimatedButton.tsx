@@ -29,7 +29,7 @@ const AnimatedButton = ({ name, onClick, link, width = "w-fit" }: IProps) => {
           initial="rest"
           whileHover="active"
           transition={defaultTransition}
-          className={`relative ${width} py-4 px-6 rounded-[70px] border-WHITE border-solid border text-lg font-medium`}
+          className={`relative ${width} px-6 py-4 rounded-[70px] border-WHITE border-solid border text-lg font-medium`}
         >
           <span className={`block ${width === "w-full" ? "text-center" : "text-left"}`}>{name}</span>
           <motion.div

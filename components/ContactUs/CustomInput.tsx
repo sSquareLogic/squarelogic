@@ -49,7 +49,7 @@ const CustomInput = ({ controller, type, id, name, isTextArea, placeholder }: IP
             id={id}
             placeholder={placeholder}
             value={value}
-            rows={10}
+            rows={6}
             onChange={(e) => setValue(e.target.value)}
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}
