@@ -5,6 +5,7 @@ import { useContext, useRef } from "react";
 
 import { AnimationContext } from "@/context/AnimationContext";
 import Image from "next/image";
+import defaultTransition from "@/settings/transition";
 import { useEffect } from "react";
 
 const MouseFollower = () => {
@@ -64,22 +65,16 @@ const MouseFollower = () => {
               }
             : {}
         }
-        transition={{
-          duration: 0.3,
-        }}
+        transition={{ ...defaultTransition, duration: 0.3 }}
       >
         <motion.div
           initial={{ opacity: 0 }}
-          transition={{
-            duration: 0.2,
-          }}
+          transition={{ ...defaultTransition, duration: 0.2 }}
           animate={
             isLink
               ? {
                   opacity: 1,
-                  transition: {
-                    duration: 0.4,
-                  },
+                  transition: { duration: 0.4 },
                 }
               : {}
           }

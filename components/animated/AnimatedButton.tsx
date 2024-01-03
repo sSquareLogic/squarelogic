@@ -34,6 +34,7 @@ const AnimatedButton = ({ name, onClick, link, width = "w-fit" }: IProps) => {
           <span className={`block ${width === "w-full" ? "text-center" : "text-left"}`}>{name}</span>
           <motion.div
             variants={variants}
+            transition={defaultTransition}
             className={`absolute top-[50%] rounded-[70px] left-0 w-full h-0 -translate-y-[50%] bg-WHITE text-BLACK flex items-center justify-center overflow-hidden pointer-events-none ${
               width === "w-full" ? "text-center" : "text-left"
             }`}
@@ -49,11 +50,13 @@ const AnimatedButton = ({ name, onClick, link, width = "w-fit" }: IProps) => {
       type="button"
       initial="rest"
       whileHover="active"
+      transition={defaultTransition}
       className={`relative ${width} py-4 px-6 rounded-[70px] border-WHITE border-solid border text-lg font-medium`}
     >
       <span className={`block ${width === "w-full" ? "text-center" : "text-left"}`}>{name}</span>
       <motion.div
         variants={variants}
+        transition={defaultTransition}
         className={`absolute top-[50%] left-0 rounded-[70px] w-full h-0 -translate-y-[50%] bg-WHITE text-BLACK flex items-center justify-center overflow-hidden pointer-events-none ${
           width === "w-full" ? "text-center" : "text-left"
         }`}

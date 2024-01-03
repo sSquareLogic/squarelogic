@@ -1,6 +1,7 @@
 "use client";
 
 import colors from "@/settings/colors";
+import defaultTransition from "@/settings/transition";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 
@@ -27,6 +28,7 @@ const NavLink = ({ path, name, link }: IProps) => {
       className="nav-link block text-lg font-medium"
       variants={variants}
       initial="textRest"
+      transition={defaultTransition}
       animate={pathname.endsWith(path) ? "textActive" : "textRest"}
     >
       {name}

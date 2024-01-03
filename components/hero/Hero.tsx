@@ -7,6 +7,7 @@ import Container from "@/components/Container";
 import { IHero } from "@/sanity/schemas/home";
 import TopText from "./TopText";
 import blocksToText from "@/sanity/lib/portableToText";
+import defaultTransition from "@/settings/transition";
 import { useRef } from "react";
 
 const Hero = ({ description, title }: IHero) => {
@@ -18,6 +19,7 @@ const Hero = ({ description, title }: IHero) => {
       <TopText isBigTextInView={isBigTextInView} />
       <div className="flex flex-col gap-10">
         <motion.h1
+          transition={defaultTransition}
           ref={ref}
           className="font-bold text-center whitespace-nowrap text-[14.8vw] leading-[115%] uppercase w-full overflow-hidden"
         >
@@ -30,7 +32,7 @@ const Hero = ({ description, title }: IHero) => {
                 key={i}
                 initial={{ y: "100%" }}
                 animate={{ y: "0%" }}
-                transition={{ type: "tween", duration: 0.5, delay: delay, ease: "easeOut" }}
+                transition={defaultTransition}
               >
                 {char}
               </motion.span>
@@ -40,7 +42,7 @@ const Hero = ({ description, title }: IHero) => {
         <Container>
           <motion.div
             className="flex justify-center overflow-hidden"
-            transition={{ type: "tween", duration: 0.4, ease: "easeOut" }}
+            transition={defaultTransition}
             initial={{
               opacity: 1,
               y: "0%",

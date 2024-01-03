@@ -6,6 +6,7 @@ import AnimateInView from "@/hooks/AnimateInView";
 import Container from "../Container";
 import { IProjects } from "@/sanity/schemas/projects";
 import ProjectImage from "./ProjectImage";
+import defaultTransition from "@/settings/transition";
 import { useMediaQuery } from "usehooks-ts";
 
 const ProjectsShow = ({ projects }: IProjects["projects"]) => {
@@ -31,6 +32,7 @@ const ProjectsShow = ({ projects }: IProjects["projects"]) => {
           ))}
         </div>
         <motion.div
+          transition={defaultTransition}
           className="projects-row flex flex-col gap-[92px] mt-40 max-md:mt-20 max-[680px]:mt-0 max-sm:gap-20"
           style={!stopAnimation ? { y } : {}}
         >

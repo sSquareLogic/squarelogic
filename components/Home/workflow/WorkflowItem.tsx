@@ -10,6 +10,7 @@ const WorkflowItem = ({ description, title }: IWorkflow["items"][any]) => {
     <>
       <div className="workflow-item flex flex-col gap-6">
         <motion.h6
+          transition={defaultTransition}
           className="text-[64px] font-bold max-md:text-[56px] max-sm:text-[48px]"
           initial={{ opacity: "20%" }}
           whileInView={{ opacity: "100%" }}

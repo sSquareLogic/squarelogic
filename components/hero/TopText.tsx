@@ -2,6 +2,7 @@
 
 import { motion, useAnimation } from "framer-motion";
 
+import defaultTransition from "@/settings/transition";
 import { useEffect } from "react";
 
 interface IProps {
@@ -35,11 +36,7 @@ const TopText = ({ isBigTextInView }: IProps) => {
         opacity: 0,
       }}
       animate={animationControl}
-      transition={{
-        duration: 0.2,
-        type: "tween",
-        ease: "easeOut",
-      }}
+      transition={defaultTransition}
     >
       SQUARELOGIC
     </motion.h1>

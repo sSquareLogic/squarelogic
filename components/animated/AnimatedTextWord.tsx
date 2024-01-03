@@ -1,3 +1,4 @@
+import defaultTransition from "@/settings/transition";
 import { motion } from "framer-motion";
 
 interface IProps {
@@ -49,9 +50,10 @@ const AnimatedTextWord = ({ text }: IProps) => {
       variants={container}
       initial="hidden"
       animate="visible"
+      transition={defaultTransition}
     >
       {words.map((word, index) => (
-        <motion.span variants={child} style={{ marginRight: "5px" }} key={index}>
+        <motion.span variants={child} transition={defaultTransition} style={{ marginRight: "5px" }} key={index}>
           {word}
         </motion.span>
       ))}

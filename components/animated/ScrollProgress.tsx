@@ -4,6 +4,7 @@ import { motion, useScroll } from "framer-motion";
 
 import { ReactNode } from "react";
 import colors from "@/settings/colors";
+import defaultTransition from "@/settings/transition";
 
 interface IProps {
   children: ReactNode;
@@ -25,8 +26,9 @@ const ScrollProgress = ({ children }: IProps) => {
           transformOrigin: "0%",
           zIndex: 100,
           height: 3,
-          mixBlendMode: "difference",
+          mixBlendMode: "exclusion",
         }}
+        transition={defaultTransition}
       ></motion.div>
       {children}
     </>
