@@ -1,9 +1,10 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useRef, useState } from "react";
 
 import AnimatedButton from "../animated/AnimatedButton";
 import CustomInput from "./CustomInput";
+import emailjs from "@emailjs/browser";
 
 interface IFormValues {
   name: string;
@@ -21,8 +22,26 @@ const Form = () => {
     value: formValues[key],
     setValue: (value: string) => setFormValues((prev) => ({ ...prev, [key]: value })),
   });
+
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const onSubmit = async () => {
+    const service_id = process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID || "";
+    const template_id = process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID || "";
+    const public_key = process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY || "";
+
+    if (!formRef.current) return;
+    return await emailjs.sendForm(service_id, template_id, formRef.current, public_key);
+  };
   return (
-    <form className="flex flex-col gap-6" onSubmit={(e: FormEvent) => e.preventDefault()}>
+    <form
+      ref={formRef}
+      className="flex flex-col gap-6"
+      onSubmit={async (e: FormEvent) => {
+        e.preventDefault();
+        console.log(await onSubmit());
+      }}
+    >
       <div className="flex items-center gap-6 max-sm:flex-col">
         <CustomInput name="name" id="name" controller={createController("name")} placeholder="Your name" type="text" />
         <CustomInput
@@ -42,6 +61,7 @@ const Form = () => {
           isTextArea
         />
       </div>
+      <input type="text" name="submitted_time" id="submitted_time" hidden value={new Date().toLocaleString()} />
       <div className="pt-4">
         <AnimatedButton name="Send your message" width="w-full" />
       </div>

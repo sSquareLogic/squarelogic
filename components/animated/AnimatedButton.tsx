@@ -10,9 +10,10 @@ interface IProps {
   link?: string;
   name: string;
   width?: "w-full" | "w-fit";
+  type?: "button" | "submit";
 }
 
-const AnimatedButton = ({ name, onClick, link, width = "w-fit" }: IProps) => {
+const AnimatedButton = ({ name, onClick, link, width = "w-fit", type }: IProps) => {
   const variants = {
     rest: {
       height: "0%",
@@ -47,7 +48,7 @@ const AnimatedButton = ({ name, onClick, link, width = "w-fit" }: IProps) => {
   ) : (
     <motion.button
       onClick={onClick}
-      type="button"
+      type={type}
       initial="rest"
       whileHover="active"
       transition={defaultTransition}
