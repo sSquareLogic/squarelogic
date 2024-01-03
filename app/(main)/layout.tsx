@@ -18,7 +18,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <ScrollProgress>
             <MouseFollower />
             <FloatingNav />
-
             {children}
             <Footer />
           </ScrollProgress>
