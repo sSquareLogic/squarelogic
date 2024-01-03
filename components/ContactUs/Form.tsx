@@ -4,7 +4,9 @@ import { FormEvent, useRef, useState } from "react";
 
 import AnimatedButton from "../animated/AnimatedButton";
 import CustomInput from "./CustomInput";
+import colors from "@/settings/colors";
 import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 
 interface IFormValues {
   name: string;
@@ -39,7 +41,22 @@ const Form = () => {
       className="flex flex-col gap-6"
       onSubmit={async (e: FormEvent) => {
         e.preventDefault();
-        console.log(await onSubmit());
+        const res = await onSubmit();
+
+        if (res?.status === 200) {
+          toast("Message sent successfully!", {
+            progressStyle: { background: colors.ACCENT },
+          });
+          setFormValues({
+            email: "",
+            name: "",
+            message: "",
+          });
+        } else {
+          toast("Message failed to send!", {
+            progressStyle: { background: "red" },
+          });
+        }
       }}
     >
       <div className="flex items-center gap-6 max-sm:flex-col">
