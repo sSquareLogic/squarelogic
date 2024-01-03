@@ -54,14 +54,13 @@ const MouseFollower = () => {
         initial={{
           width: cursorSize,
           height: cursorSize,
-          mixBlendMode: "exclusion",
         }}
         animate={
           isLink || isLoop
             ? {
                 width: 110,
                 height: 110,
-                // mixBlendMode: "exclusion",
+                mixBlendMode: "exclusion",
               }
             : {}
         }
@@ -85,7 +84,7 @@ const MouseFollower = () => {
               : {}
           }
         >
-          <Image src={"/arrow-big.svg"} alt="Arrow Icon" width={24} height={24} />
+          <Image src={"/arrow-big.svg"} alt="Arrow Icon" width={24} height={24} className="w-6 h-6 object-contain" />
         </motion.div>
       </motion.div>
     </div>
