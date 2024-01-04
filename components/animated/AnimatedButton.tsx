@@ -11,9 +11,10 @@ interface IProps {
   name: string;
   width?: "w-full" | "w-fit";
   type?: "button" | "submit";
+  disabled?: boolean;
 }
 
-const AnimatedButton = ({ name, onClick, link, width = "w-fit", type }: IProps) => {
+const AnimatedButton = ({ name, onClick, link, width = "w-fit", type, disabled }: IProps) => {
   const variants = {
     rest: {
       height: "0%",
@@ -50,8 +51,10 @@ const AnimatedButton = ({ name, onClick, link, width = "w-fit", type }: IProps) 
       onClick={onClick}
       type={type}
       initial="rest"
-      whileHover="active"
+      whileHover={disabled ? "" : "active"}
+      animate={disabled ? { opacity: 0.5 } : { opacity: 1 }}
       transition={defaultTransition}
+      disabled={disabled}
       className={`relative ${width} py-4 px-6 rounded-[70px] border-WHITE border-solid border text-lg font-medium`}
     >
       <span className={`block ${width === "w-full" ? "text-center" : "text-left"}`}>{name}</span>
