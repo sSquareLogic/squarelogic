@@ -6,15 +6,21 @@ interface IProps {
 }
 
 const AnimatedTextWord = ({ text }: IProps) => {
+  const lineLength = 8;
   const words = text.split(" ");
 
-  // Variants for Container of words.
-  const container = {
-    hidden: { opacity: 0 },
-    visible: (i = 1) => ({
-      opacity: 1,
-      transition: { staggerChildren: 0.06, delayChildren: 0.02 * i },
-    }),
+  const makeParagraphs = (words: string[]) => {
+    const paragraphs: string[] = words
+      .reduce((result: string[][], word: string, index: number) => {
+        if (index % lineLength === 0) {
+          result.push([]);
+        }
+        result[result.length - 1].push(word);
+        return result;
+      }, [])
+      .map((paragraphWords: string[]) => paragraphWords.join(" "));
+
+    return paragraphs;
   };
 
   // Variants for each word.
@@ -22,42 +28,29 @@ const AnimatedTextWord = ({ text }: IProps) => {
   const child = {
     visible: {
       opacity: 1,
-      x: 0,
       y: 0,
-      rotateX: "0deg",
-      transition: {
-        type: "tween",
-        damping: 12,
-        stiffness: 100,
-      },
     },
     hidden: {
       opacity: 0,
-      x: 20,
-      y: 20,
-      rotateX: "90deg",
-      transition: {
-        type: "tween",
-        damping: 12,
-        stiffness: 100,
-      },
+      y: "100%",
     },
   };
 
   return (
-    <motion.div
-      className="max-w-[70%] uppercase overflow-hidden flex flex-wrap justify-center text-2xl font-medium gap-y-1 max-md:text-xl max-md:max-w-none max-sm:text-lg"
-      variants={container}
-      initial="hidden"
-      animate="visible"
-      transition={defaultTransition}
-    >
-      {words.map((word, index) => (
-        <motion.span variants={child} transition={defaultTransition} style={{ marginRight: "5px" }} key={index}>
+    <div className="max-w-[70%] uppercase overflow-hidden flex flex-col justify-center text-2xl font-medium gap-y-2 max-md:text-xl max-md:max-w-none max-sm:text-lg">
+      {makeParagraphs(words).map((word, index) => (
+        <motion.p
+          key={index}
+          className="text-center"
+          variants={child}
+          initial="hidden"
+          animate="visible"
+          transition={{ ...defaultTransition, delay: index * 0.2 }}
+        >
           {word}
-        </motion.span>
+        </motion.p>
       ))}
-    </motion.div>
+    </div>
   );
 };
 

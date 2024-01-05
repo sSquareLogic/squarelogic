@@ -7,9 +7,10 @@ import { useEffect } from "react";
 
 interface IProps {
   isBigTextInView: boolean;
+  title: string;
 }
 
-const TopText = ({ isBigTextInView }: IProps) => {
+const TopText = ({ isBigTextInView, title }: IProps) => {
   const animationControl = useAnimation();
   useEffect(() => {
     if (!isBigTextInView) {
@@ -38,7 +39,7 @@ const TopText = ({ isBigTextInView }: IProps) => {
       animate={animationControl}
       transition={defaultTransition}
     >
-      SQUARELOGIC
+      {title}
     </motion.h1>
   );
 };

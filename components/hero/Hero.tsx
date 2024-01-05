@@ -16,7 +16,7 @@ const Hero = ({ description, title }: IHero) => {
   const isBigTextInView = useInView(ref);
   return (
     <section className="hero">
-      <TopText isBigTextInView={isBigTextInView} />
+      <TopText isBigTextInView={isBigTextInView} title={title} />
       <div className="flex flex-col gap-10">
         <motion.h1
           transition={defaultTransition}
@@ -40,26 +40,9 @@ const Hero = ({ description, title }: IHero) => {
           })}
         </motion.h1>
         <Container>
-          <motion.div
-            className="flex justify-center overflow-hidden"
-            transition={defaultTransition}
-            initial={{
-              opacity: 1,
-              y: "0%",
-              rotateX: "0deg",
-            }}
-            animate={
-              !isBigTextInView
-                ? {
-                    opacity: 0,
-                    y: "-100%",
-                    rotateX: "90deg",
-                  }
-                : {}
-            }
-          >
+          <div className="flex justify-center overflow-hidden">
             <AnimatedTextWord text={typeof description === "string" ? description : blocksToText(description)} />
-          </motion.div>
+          </div>
         </Container>
       </div>
     </section>
