@@ -7,8 +7,8 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="mb-10">
-        <ParallaxText baseVelocity={-3}>SquareLogic</ParallaxText>
-        <ParallaxText baseVelocity={3}>SquareLogic</ParallaxText>
+        <ParallaxText baseVelocity={-3}>SQUARELOGIC</ParallaxText>
+        <ParallaxText baseVelocity={3}>SQUARELOGIC</ParallaxText>
       </div>
       <Container className="pb-[169px] flex flex-col gap-10">
         <div className="grid grid-cols-THREE gap-8 max-md:flex max-md:flex-col max-md:gap-6 max-md:items-center">
@@ -30,7 +30,7 @@ const Footer = () => {
             </CursorHover>
           </div>
           <ToTopBtn />
-          <p className="text-lg font-medium justify-self-end">SquareLogic ©</p>
+          <p className="text-lg font-medium justify-self-end">SQUARELOGIC ©</p>
         </div>
       </Container>
     </footer>
