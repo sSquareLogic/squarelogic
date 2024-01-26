@@ -10,7 +10,7 @@ const Features = ({ features, subtitle }: IFeatures) => {
         <div className="grid grid-cols-THIRTEE gap-10 max-lg:flex max-lg:flex-col max-lg:gap-12">
           <div className="h-fit sticky top-6 flex flex-col gap-6 max-md:gap-4 max-lg:static">
             <span className="text-lg font-medium">(Our features)</span>
-            <h6 className="text-[40px] font-bold max-md:text-[32px]">{subtitle}</h6>
+            <h3 className="text-[40px] font-bold max-md:text-[32px]">{subtitle}</h3>
           </div>
           <div className="flex flex-col gap-6">
             {features.map((feature, i) => (

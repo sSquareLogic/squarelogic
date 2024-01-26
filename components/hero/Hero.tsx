@@ -18,7 +18,7 @@ const Hero = ({ description, title }: IHero) => {
     <section className="hero">
       <TopText isBigTextInView={isBigTextInView} title={title} />
       <div className="flex flex-col gap-10">
-        <motion.h1
+        <motion.p
           transition={defaultTransition}
           ref={ref}
           className="font-bold text-center whitespace-nowrap text-[14.8vw] leading-[115%] uppercase w-full overflow-hidden"
@@ -38,7 +38,7 @@ const Hero = ({ description, title }: IHero) => {
               </motion.span>
             );
           })}
-        </motion.h1>
+        </motion.p>
         <Container>
           <div className="flex justify-center overflow-hidden">
             <AnimatedTextWord text={typeof description === "string" ? description : blocksToText(description)} />

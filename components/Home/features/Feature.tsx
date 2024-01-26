@@ -29,7 +29,7 @@ const Feature = ({ name, description, icon, accent }: IProps) => {
         />
       </div>
       <div className="flex flex-col gap-6 max-sm:gap-4" style={accent ? { color: colors.BLACK } : {}}>
-        <h6 className="text-2xl font-bold max-lg:text-xl">{name}</h6>
+        <h3 className="text-2xl font-bold max-lg:text-xl">{name}</h3>
         <div className="text-lg leading-[140%] max-lg:text-base">
           <PortableText value={description} />
         </div>

@@ -9,7 +9,7 @@ const Workflow = ({ items, subtitle }: IWorkflow) => {
         <div className="relative grid grid-cols-THIRTEE gap-10 max-lg:flex max-lg:flex-col max-lg:gap-8">
           <div className="flex flex-col h-fit sticky top-6 left-0 gap-6 max-md:gap-4 max-lg:static">
             <span className="text-lg font-medium">(Our workflow)</span>
-            <h6 className="text-[40px] font-bold max-md:text-[32px]">{subtitle}</h6>
+            <h3 className="text-[40px] font-bold max-md:text-[32px]">{subtitle}</h3>
           </div>
           <div className="flex flex-col gap-10">
             {items.map((item, i) => (

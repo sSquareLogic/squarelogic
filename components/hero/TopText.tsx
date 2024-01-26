@@ -28,7 +28,7 @@ const TopText = ({ isBigTextInView, title }: IProps) => {
     }
   }, [isBigTextInView, animationControl]);
   return (
-    <motion.h1
+    <motion.p
       className="top-text pointer-events-none fixed top-4 left-[50%] uppercase font-bold text-3xl z-[100] text-WHITE mix-blend-difference"
       initial={{
         x: "-50%",
@@ -40,7 +40,7 @@ const TopText = ({ isBigTextInView, title }: IProps) => {
       transition={defaultTransition}
     >
       {title}
-    </motion.h1>
+    </motion.p>
   );
 };
 export default TopText;

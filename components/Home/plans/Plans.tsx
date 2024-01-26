@@ -7,7 +7,7 @@ const Plans = ({ items, subtitle }: IPricing) => {
     <section className="plans">
       <Container className="flex flex-col gap-20">
         <div className="flex flex-col gap-6">
-          <h6 className="text-lg font-medium">(Pricing)</h6>
+          <h3 className="text-lg font-medium">(Pricing)</h3>
           <p className="text-[32px] font-medium">{subtitle}</p>
         </div>
         <div className="grid grid-cols-THREE gap-6 max-[1200px]:flex max-[1200px]:flex-col items-center">

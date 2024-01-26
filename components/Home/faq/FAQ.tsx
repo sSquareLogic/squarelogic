@@ -9,7 +9,7 @@ const FAQ = ({ items, subtitle }: IFAQ) => {
         <div className="grid grid-cols-THIRTEE gap-10 max-lg:flex max-lg:flex-col max-lg:gap-8">
           <div className="flex flex-col h-fit sticky top-6 gap-6 max-lg:static max-lg:gap-4">
             <span className="text-lg font-medium">(FAQ)</span>
-            <h6 className="text-[40px] font-bold max-md:text-[32px]">{subtitle}</h6>
+            <h3 className="text-[40px] font-bold max-md:text-[32px]">{subtitle}</h3>
           </div>
           <FAQList items={items} />
         </div>
