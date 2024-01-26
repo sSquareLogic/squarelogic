@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow: /panel
+
+Sitemap: https://squarelogic.space/sitemap.xml
