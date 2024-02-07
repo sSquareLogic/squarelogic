@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: "https://squarelogic.space/contact_us",
+      url: "https://squarelogic.space/contact-us",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.75,
