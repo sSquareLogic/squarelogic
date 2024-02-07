@@ -10,7 +10,6 @@ import {
   useVelocity,
 } from "framer-motion";
 
-import CursorHover from "./CursorHover";
 import { useRef } from "react";
 import { wrap } from "@motionone/utils";
 
