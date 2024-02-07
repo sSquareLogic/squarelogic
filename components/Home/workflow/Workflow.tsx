@@ -1,5 +1,4 @@
 import Container from "@/components/Container";
-import CursorHover from "@/components/animated/CursorHover";
 import { IWorkflow } from "@/sanity/schemas/home";
 import Title from "@/components/Title";
 import WorkflowItem from "./WorkflowItem";
@@ -14,9 +13,7 @@ const Workflow = ({ items, subtitle }: IWorkflow) => {
         </div>
         <div className="flex flex-col border-b border-BLACK3">
           {items.map((item, i) => (
-            <CursorHover key={i} state="loop">
-              <WorkflowItem {...item} />
-            </CursorHover>
+            <WorkflowItem key={i} {...item} />
           ))}
         </div>
       </Container>
