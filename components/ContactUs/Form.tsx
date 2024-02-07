@@ -31,9 +31,9 @@ const Form = () => {
   const formRef = useRef<HTMLFormElement>(null);
 
   const onSubmit = async () => {
-    const service_id = process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID || "";
-    const template_id = process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID || "";
-    const public_key = process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY || "";
+    const service_id = process.env["NEXT_PUBLIC_EMAIL_SERVICE_ID"] || "";
+    const template_id = process.env["NEXT_PUBLIC_EMAIL_TEMPLATE_ID"] || "";
+    const public_key = process.env["NEXT_PUBLIC_EMAIL_PUBLIC_KEY"] || "";
 
     if (!formRef.current || !captcha) return;
 
@@ -89,7 +89,7 @@ const Form = () => {
         />
       </div>
       <input type="text" name="submitted_time" id="submitted_time" hidden value={new Date().toLocaleString()} />
-      <ReCAPTCHA sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!} theme="dark" onChange={setCaptcha} />
+      <ReCAPTCHA sitekey={process.env["NEXT_PUBLIC_RECAPTCHA_SITE_KEY"]!} theme="dark" onChange={setCaptcha} />
       <div className="pt-4">
         <AnimatedButton name="Send your message" width="w-full" disabled={captcha ? false : true} />
       </div>

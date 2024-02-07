@@ -1,11 +1,10 @@
 "use client";
 
-import { motion, useScroll } from "framer-motion";
-
 import AnimatedButton from "@/components/animated/AnimatedButton";
 import { IProjects } from "@/sanity/schemas/home";
 import Project from "./Project";
 import { useRef } from "react";
+import { useScroll } from "framer-motion";
 
 const Projects = ({ projects }: IProjects) => {
   const container = useRef<HTMLElement>(null);

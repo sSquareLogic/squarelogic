@@ -6,7 +6,6 @@ import AnimatedImage from "../../animated/AnimatedImage";
 import { IProjects } from "@/sanity/schemas/home";
 import Image from "next/image";
 import { PortableText } from "@portabletext/react";
-import defaultTransition from "@/settings/transition";
 import { urlForImage } from "@/sanity/lib/image";
 import { useMediaQuery } from "usehooks-ts";
 import { useRef } from "react";
