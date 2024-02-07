@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
 
 const config: Config = {
   content: [
@@ -8,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        INTER: ["--INTER", ...fontFamily.sans],
+      },
       colors: {
         WHITE: "#F8F8F8",
         GRAY: "#E9E9E9",

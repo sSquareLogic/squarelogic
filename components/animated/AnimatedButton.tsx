@@ -31,7 +31,7 @@ const AnimatedButton = ({ name, onClick, link, width = "w-fit", type, disabled }
           initial="rest"
           whileHover="active"
           transition={defaultTransition}
-          className={`relative ${width} px-6 py-4 rounded-[70px] border-WHITE border-solid border text-lg font-medium`}
+          className={`relative ${width} px-6 py-4 rounded-[70px] border-WHITE border-solid border text-lg font-medium font-INTER -tracking-[1%]`}
         >
           <span className={`block ${width === "w-full" ? "text-center" : "text-left"}`}>{name}</span>
           <motion.div

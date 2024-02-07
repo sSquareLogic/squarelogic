@@ -1,15 +1,16 @@
 import "./globals.css";
 
 import { IProfile, getProfileData } from "@/sanity/schemas/profile";
+import { Inter, Space_Grotesk } from "next/font/google";
 
 import Script from "next/script";
-import { Space_Grotesk } from "next/font/google";
 import { URL } from "url";
 import blocksToText from "@/sanity/lib/portableToText";
 import colors from "@/settings/colors";
 import { urlForImage } from "@/sanity/lib/image";
 
 const spacegr = Space_Grotesk({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "700"], variable: "--INTER" });
 
 export const viewport = {
   width: "device-width",
@@ -49,7 +50,7 @@ export const generateMetadata = async () => {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${spacegr.className} text-WHITE bg-BLACK`}>{children}</body>
+      <body className={`${spacegr.className} ${inter.variable} text-WHITE bg-BLACK`}>{children}</body>
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-J5G9E3MEJJ"></Script>
       <Script id="google-analytics">
         {`window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-J5G9E3MEJJ');`}

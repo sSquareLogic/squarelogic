@@ -49,7 +49,7 @@ const ParallaxText = ({ children, baseVelocity = 100 }: ParallaxProps) => {
   });
 
   return (
-    <div className="parallax text-[160px] font-bold uppercase max-md:text-[14vw] overflow-hidden m-0 whitespace-nowrap flex flex-nowrap">
+    <div className="parallax text-[160px] font-bold uppercase max-md:text-[14vw] overflow-hidden m-0 whitespace-nowrap flex flex-nowrap font-INTER -tracking-[1%]">
       <motion.div className="scroller uppercase flex flex-nowrap" style={{ x }}>
         <span className="block mr-20 max-md:mr-10">{children}</span>
         <span className="block mr-20 max-md:mr-6">{children}</span>

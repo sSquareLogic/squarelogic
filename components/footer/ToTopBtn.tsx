@@ -20,7 +20,7 @@ const ToTopBtn = () => {
       type="button"
       transition={defaultTransition}
       onClick={() => window.scrollTo(0, 0)}
-      className="flex items-center gap-6 text-lg font-medium justify-self-center"
+      className="flex items-center gap-6 text-lg font-medium justify-self-center font-INTER -tracking-[1%]"
     >
       <span>Back to top</span>
       <motion.div variants={variants} transition={defaultTransition}>

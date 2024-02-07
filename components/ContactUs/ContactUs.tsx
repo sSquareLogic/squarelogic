@@ -1,5 +1,6 @@
 import Container from "../Container";
 import Form from "./Form";
+import Title from "../Title";
 
 const ContactUs = () => {
   return (
@@ -8,7 +9,7 @@ const ContactUs = () => {
         <div className="flex flex-col gap-6 max-md:gap-4">
           <span className="text-lg font-medium">(Contact Us)</span>
           {/* <h3 className="text-[40px] font-bold max-md:text-[32px]">{subtitle}</h3> */}
-          <h3 className="text-[40px] font-bold max-md:text-[32px]">Get in touch with us</h3>
+          <Title text="Get in touch with us" />
         </div>
         <Form />
       </Container>

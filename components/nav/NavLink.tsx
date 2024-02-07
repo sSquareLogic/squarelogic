@@ -25,7 +25,7 @@ const NavLink = ({ path, name, link }: IProps) => {
   return (
     <motion.a
       href={link}
-      className="nav-link block text-lg font-medium"
+      className="nav-link block text-lg font-medium font-INTER -tracking-[1%]"
       variants={variants}
       initial="textRest"
       transition={defaultTransition}

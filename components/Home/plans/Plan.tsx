@@ -19,12 +19,12 @@ const Plan = ({ accent, description, name, features, price }: IProps) => {
       <div className="flex flex-col gap-6 justify-between h-full max-h-48">
         {price ? (
           <div className="flex flex-col gap-6">
-            <p className="text-lg text-WHITE" style={accent ? { color: colors.BLACK } : {}}>
+            <p className="text-lg text-WHITE font-INTER -tracking-[1%]" style={accent ? { color: colors.BLACK } : {}}>
               {name}
             </p>
             <div className="flex items-center gap-6">
               <span
-                className="text-[56px] text-ACCENT font-bold max-lg:text-[50px] max-md:text-[44px] max-sm:text-[40px]"
+                className="text-[56px] text-ACCENT font-bold font-INTER -tracking-[1%] max-lg:text-[50px] max-md:text-[44px] max-sm:text-[40px]"
                 style={accent ? { color: colors.BLACK } : {}}
               >
                 {price}
@@ -43,7 +43,7 @@ const Plan = ({ accent, description, name, features, price }: IProps) => {
         ) : (
           <div className="flex flex-col gap-6 pb-20">
             <span
-              className="text-[56px] text-ACCENT font-bold max-lg:text-[50px] max-md:text-[44px] max-sm:text-[40px]"
+              className="text-[56px] text-ACCENT font-bold font-INTER -tracking-[1%] max-lg:text-[50px] max-md:text-[44px] max-sm:text-[40px]"
               style={accent ? { color: colors.BLACK } : {}}
             >
               {name}
@@ -59,7 +59,7 @@ const Plan = ({ accent, description, name, features, price }: IProps) => {
           <a
             href={"https://calendly.com/mikejames1311005/squarelogic"}
             target="_blank"
-            className="block rounded-[56px] w-full bg-ACCENT text-center py-4 px-6 text-BLACK font-bold text-lg"
+            className="block rounded-[56px] w-full bg-ACCENT text-center py-4 px-6 text-BLACK font-bold text-lg font-INTER -tracking-[1%]"
             style={accent ? { background: colors.BLACK, color: colors.WHITE } : {}}
           >
             Get started

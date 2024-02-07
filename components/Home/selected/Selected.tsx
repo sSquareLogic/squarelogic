@@ -10,7 +10,7 @@ const Selected = ({ description, image, link, project_name, year }: ISelectedWor
     <section className="selected">
       <a href={link} target="_blank">
         <Container className="flex flex-col gap-4">
-          <h3 className="text-lg font-medium">(Selected work)</h3>
+          <h4 className="text-lg font-medium">(Selected work)</h4>
           <AnimatedImage>
             <Image
               src={urlForImage(image).url()}
