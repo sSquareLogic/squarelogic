@@ -17,6 +17,7 @@
     "@studio-freight/lenis": "^1.0.33",
     "@types/react-google-recaptcha": "^2.1.8",
     "framer-motion": "^10.16.16",
+    "googleapis": "^133.0.0",
     "gsap": "^3.12.4",
     "next": "14.0.4",
     "next-sanity": "^7.0.5",

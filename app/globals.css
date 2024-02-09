@@ -61,3 +61,8 @@ html.lenis {
   border-radius: 8px;
   background: #f8f8f8;
 }
+
+.list {
+  list-style-type: disc;
+  list-style-position: inside;
+}
