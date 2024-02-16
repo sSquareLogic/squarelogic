@@ -26,7 +26,6 @@ const isWindows11 = (): boolean => {
 const SmoothScroll = ({ children }: PropsWithChildren) => {
   useEffect(() => {
     const lenis = new Lenis();
-    lenis.velocity = 500;
     function raf(time: any) {
       lenis.raf(time);
       requestAnimationFrame(raf);
