@@ -18,7 +18,7 @@ const GiveawayForm = () => {
     name: "",
     email: "",
   });
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isLoading, _setIsLoading] = useState<boolean>(false);
 
   const validator = new Validator();
   const onSubmit = async () => {
