@@ -5,7 +5,7 @@ import Image from "next/image";
 const Giveaway = () => {
   return (
     <main className="giveaway-main">
-      <Container className="flex flex-col items-center gap-14 px-[5%]">
+      <Container className="flex flex-col items-center gap-14 px-[5%] max-md:gap-10 max-md:px-0">
         <div className="w-[200px] h-[200px]">
           <Image
             src={"/logo.svg"}
@@ -16,11 +16,11 @@ const Giveaway = () => {
             className="w-full h-full object-contain"
           />
         </div>
-        <h1 className="text-[50px] text-WHITE uppercase font-INTER font-medium text-center">
+        <h1 className="text-[50px] text-WHITE uppercase font-INTER font-medium text-center max-md:text-[40px] max-sm:text-4xl">
           The <span className="text-ACCENT font-bold">Ultra</span> Website Optimization Guide
         </h1>
-        <div className="line border-t-[3px] border-ACCENT w-[60%]"></div>
-        <div className="grid grid-cols-TWO gap-20 font-INTER text-2xl leading-[200%]">
+        <div className="line border-t-[3px] border-ACCENT w-[60%] max-md:w-[80%]"></div>
+        <div className="grid grid-cols-TWO gap-20 font-INTER text-2xl leading-[200%] max-lg:text-xl max-md:flex max-md:flex-col max-md:gap-0 max-md:text-2xl max-sm:text-xl">
           <ul className="flex flex-col list">
             <li>Learn website optimization</li>
             <li>Understand branding</li>

@@ -58,13 +58,13 @@ const GiveawayForm = () => {
 
   return (
     <form
-      className="flex flex-col gap-6 w-[60%] pb-[100px]"
+      className="flex flex-col gap-6 w-[60%] pb-[100px] max-lg:w-[80%] max-md:w-full"
       onSubmit={async (e: FormEvent) => {
         e.preventDefault();
         await onSubmit();
       }}
     >
-      <div className="flex gap-4">
+      <div className="flex gap-4 max-lg:flex-col">
         <CustomInput id="name" type="text" name="name" placeholder="Your Name" controller={createController("name")} />
         <CustomInput
           id="email"
