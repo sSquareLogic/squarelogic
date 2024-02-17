@@ -36,7 +36,7 @@ const GiveawayForm = () => {
     });
     await res.json();
 
-    if (!(res.statusText === "OK"))
+    if (res === undefined || res.status !== 200 || !res.ok || !res.ok.toString())
       return toast("Message failed to send!", {
         progressStyle: { background: "red" },
       });
