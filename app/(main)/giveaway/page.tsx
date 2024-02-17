@@ -1,6 +1,28 @@
 import Container from "@/components/Container";
 import GiveawayForm from "@/components/Giveaway/GiveawayForm";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "The Ultra Website Optimization Guide | SQUARELOGIC",
+  description:
+    "Get 'The Ultra Website Optimization Guide' now and learn how to optimize your website, understand branding, design basics, and boost conversion rates!",
+  twitter: {
+    title: "The Ultra Website Optimization Guide | SQUARELOGIC",
+    description:
+      "Get 'The Ultra Website Optimization Guide' now and learn how to optimize your website, understand branding, design basics, and boost conversion rates!",
+    site: "SQUARELOGIC",
+    card: "summary_large_image",
+    images: ["/Giveaway.png"],
+  },
+  openGraph: {
+    title: "The Ultra Website Optimization Guide | SQUARELOGIC",
+    description:
+      "Get 'The Ultra Website Optimization Guide' now and learn how to optimize your website, understand branding, design basics, and boost conversion rates!",
+    images: ["/Giveaway.png"],
+    type: "website",
+  },
+};
 
 const Giveaway = () => {
   return (
