@@ -22,33 +22,40 @@ const GiveawayForm = () => {
 
   const validator = new Validator();
   const onSubmit = async () => {
-    if (validator.validateAll(form.name, form.email)) {
-      // const res = await emailjs.sendForm(service_id, template_id, formRef.current, public_key);
-      const res = { status: 200 };
-      if (res.status === 200) {
-        toast("Message sent successfully!", {
-          progressStyle: { background: colors.ACCENT },
-        });
-        setForm({
-          email: "",
-          name: "",
-        });
-      } else {
-        toast("Message failed to send!", {
-          progressStyle: { background: "red" },
-        });
-      }
-    } else {
-      toast("Please fill in all required fields!", {
+    if (!validator.validateAll(form.name, form.email))
+      return toast("Please fill in all required fields!", {
         progressStyle: { background: "red" },
       });
-    }
+
+    const res = await fetch("/api/save-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name: form.name, email: form.email }),
+    });
+    await res.json();
+
+    if (!(res.statusText === "OK"))
+      return toast("Message failed to send!", {
+        progressStyle: { background: "red" },
+      });
+
+    toast("Thank you! Redirecting...", {
+      progressStyle: { background: colors.ACCENT },
+    });
+    setTimeout(() => {
+      window.location.assign(
+        "https://dark-koala-258.notion.site/THE-ULTRA-WEBSITE-OPTIMIZATION-GUIDE-DETAILED-1ebb66824a644944a650af0bc98b3b3b",
+      );
+    }, 2000);
   };
 
   const createController = (key: keyof IFormValues) => ({
     value: form[key],
     setValue: (value: string) => setForm((prev) => ({ ...prev, [key]: value })),
   });
+
   return (
     <form
       className="flex flex-col gap-6 w-[60%] pb-[100px]"
