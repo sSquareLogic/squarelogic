@@ -9,6 +9,7 @@ import Hero from "@/components/hero/Hero";
 import Plans from "@/components/Home/plans/Plans";
 import Projects from "@/components/Home/projects/Projects";
 import Selected from "@/components/Home/selected/Selected";
+import Testimonials from "@/components/Testimonials/Testimonials";
 import Workflow from "@/components/Home/workflow/Workflow";
 import blocksToText from "@/sanity/lib/portableToText";
 
@@ -28,6 +29,7 @@ const Home = async () => {
         <Features {...features} />
         <Workflow {...workflow} />
         <FAQ {...faq} />
+        <Testimonials />
         <Plans {...pricing} />
         <Contact {...contact_us} />
       </main>
