@@ -4,21 +4,21 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Ultra Website Optimization Guide | SQUARELOGIC",
+  title: "WEBSITE MONEY-MAKING MACHINE GUIDE | SQUARELOGIC",
   description:
-    "Get 'The Ultra Website Optimization Guide' now and learn how to optimize your website, understand branding, design basics, and boost conversion rates!",
+    "Get 'WEBSITE MONEY-MAKING MACHINE GUIDE' now and learn how to optimize your website, understand branding, design basics, and boost conversion rates!",
   twitter: {
-    title: "The Ultra Website Optimization Guide | SQUARELOGIC",
+    title: "WEBSITE MONEY-MAKING MACHINE GUIDE | SQUARELOGIC",
     description:
-      "Get 'The Ultra Website Optimization Guide' now and learn how to optimize your website, understand branding, design basics, and boost conversion rates!",
+      "Get 'WEBSITE MONEY-MAKING MACHINE GUIDE' now and learn how to optimize your website, understand branding, design basics, and boost conversion rates!",
     site: "SQUARELOGIC",
     card: "summary_large_image",
     images: ["/Giveaway.png"],
   },
   openGraph: {
-    title: "The Ultra Website Optimization Guide | SQUARELOGIC",
+    title: "WEBSITE MONEY-MAKING MACHINE GUIDE | SQUARELOGIC",
     description:
-      "Get 'The Ultra Website Optimization Guide' now and learn how to optimize your website, understand branding, design basics, and boost conversion rates!",
+      "Get 'WEBSITE MONEY-MAKING MACHINE GUIDE' now and learn how to optimize your website, understand branding, design basics, and boost conversion rates!",
     images: ["/Giveaway.png"],
     type: "website",
   },
@@ -39,7 +39,7 @@ const Giveaway = () => {
           />
         </div>
         <h1 className="text-[50px] text-WHITE uppercase font-INTER font-medium text-center max-md:text-[40px] max-sm:text-4xl">
-          The <span className="text-ACCENT font-bold">Ultra</span> Website Optimization Guide
+          WEBSITE <span className="text-ACCENT font-bold">MONEY-MAKING</span> MACHINE GUIDE
         </h1>
         <div className="line border-t-[3px] border-ACCENT w-[60%] max-md:w-[80%]"></div>
         <div className="grid grid-cols-TWO gap-20 font-INTER text-2xl leading-[200%] max-lg:text-xl max-md:flex max-md:flex-col max-md:gap-0 max-md:text-2xl max-sm:text-xl">

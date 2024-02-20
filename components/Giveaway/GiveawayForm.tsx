@@ -46,7 +46,7 @@ const GiveawayForm = () => {
     });
     setTimeout(() => {
       window.location.assign(
-        "https://dark-koala-258.notion.site/THE-ULTRA-WEBSITE-OPTIMIZATION-GUIDE-DETAILED-1ebb66824a644944a650af0bc98b3b3b",
+        "https://dark-koala-258.notion.site/WEBSITE-MONEY-MAKING-MACHINE-GUIDE-DETAILED-1ebb66824a644944a650af0bc98b3b3b?pvs=4",
       );
     }, 2000);
   };
