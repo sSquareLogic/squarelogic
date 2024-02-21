@@ -3,8 +3,7 @@ import profile from "./schemas/profile";
 import home from "./schemas/home";
 import projects from "./schemas/projects";
 import contact_us from "./schemas/contact_us";
-import testimonials from "./schemas/testimonials";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [profile, home, projects, contact_us, testimonials],
+  types: [profile, home, projects, contact_us],
 };

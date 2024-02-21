@@ -16,7 +16,8 @@ import blocksToText from "@/sanity/lib/portableToText";
 const Home = async () => {
   const home = (await getHomeData()) as IHome[];
   const profile = (await getProfileData()) as IProfile[];
-  const { about_us, contact_us, faq, hero, pricing, projects, selected_work, workflow, features } = home[0];
+  const { about_us, contact_us, faq, hero, pricing, projects, selected_work, workflow, features, testimonials } =
+    home[0];
 
   return (
     <>
@@ -29,7 +30,7 @@ const Home = async () => {
         <Features {...features} />
         <Workflow {...workflow} />
         <FAQ {...faq} />
-        <Testimonials />
+        <Testimonials {...testimonials} />
         <Plans {...pricing} />
         <Contact {...contact_us} />
       </main>

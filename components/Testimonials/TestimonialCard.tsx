@@ -1,23 +1,15 @@
+import { ITestimonial } from "@/sanity/schemas/home";
 import Image from "next/image";
 import { PortableText } from "@portabletext/react";
+import { urlForImage } from "@/sanity/lib/image";
 
-// import { urlForImage } from "@/sanity/lib/image";
-
-interface IProps {
-  name: string;
-  handle: string;
-  img: any;
-  text: any;
-}
-
-const TestimonialCard = ({ handle, name, text, img }: IProps) => {
+const TestimonialCard = ({ handle, name, text, img }: ITestimonial) => {
   return (
     <div className="testimonial-card rounded-3xl bg-LIGHTBLACK p-6 flex flex-col gap-6">
       <div className="testimonial-head flex flex-col gap-4">
         <div className="flex items-start gap-4">
           <Image
-            // src={urlForImage(img).url() || ""}
-            src={img}
+            src={urlForImage(img).url() || ""}
             alt={name}
             width={48}
             height={48}

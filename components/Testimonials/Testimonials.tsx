@@ -1,8 +1,9 @@
 import Container from "../Container";
+import { ITestimonials } from "@/sanity/schemas/home";
 import TestimonialCard from "./TestimonialCard";
 import Title from "../Title";
 
-const Testimonials = () => {
+const Testimonials = ({ testimonials }: ITestimonials) => {
   return (
     <section className="testimonials">
       <Container className="flex flex-col gap-12">
@@ -11,9 +12,9 @@ const Testimonials = () => {
           <Title text="What other clients say about us" />
         </div>
         <div className="grid grid-cols-THREE gap-6">
-          <TestimonialCard handle="elonmusk" img={""} name="Elon Musk" text={"Elon Musk"} />
-          <TestimonialCard handle="elonmusk" img={""} name="Elon Musk" text={"Elon Musk"} />
-          <TestimonialCard handle="elonmusk" img={""} name="Elon Musk" text={"Elon Musk"} />
+          {testimonials.map((testimonial) => (
+            <TestimonialCard key={testimonial.handle} {...testimonial} />
+          ))}
         </div>
       </Container>
     </section>
