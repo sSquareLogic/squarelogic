@@ -31,32 +31,37 @@ const testimonials = {
     {
       name: "testimonials",
       description: "The testimonials that will be shown on the home page.",
-      type: "object",
+      type: "array",
       title: "Testimonials",
-      fields: [
+      of: [
         {
-          name: "name",
-          description: "The name of the person who gave the testimonial.",
-          type: "string",
-          title: "Name",
-        },
-        {
-          name: "handle",
-          description: "X handle of the person who gave the testimonial.",
-          type: "string",
-          title: "X handle",
-        },
-        {
-          name: "img",
-          description: "The image of the person who gave the testimonial.",
-          type: "image",
-          title: "Image",
-        },
-        {
-          name: "text",
-          description: "The testimonial text.",
-          type: "text",
-          title: "Text",
+          type: "object",
+          fields: [
+            {
+              name: "name",
+              description: "The name of the person who gave the testimonial.",
+              type: "string",
+              title: "Name",
+            },
+            {
+              name: "handle",
+              description: "X handle of the person who gave the testimonial.",
+              type: "string",
+              title: "X handle",
+            },
+            {
+              name: "img",
+              description: "The image of the person who gave the testimonial.",
+              type: "image",
+              title: "Image",
+            },
+            {
+              name: "text",
+              description: "The testimonial text.",
+              type: "text",
+              title: "Text",
+            },
+          ],
         },
       ],
     },
