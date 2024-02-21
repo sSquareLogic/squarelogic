@@ -4,7 +4,7 @@ import TestimonialCard from "./TestimonialCard";
 import Title from "../Title";
 
 const Testimonials = ({ testimonials }: ITestimonials) => {
-  return (
+  return testimonials ? (
     <section className="testimonials">
       <Container className="flex flex-col gap-12">
         <div className="max-w-[30%]">
@@ -18,6 +18,8 @@ const Testimonials = ({ testimonials }: ITestimonials) => {
         </div>
       </Container>
     </section>
+  ) : (
+    <></>
   );
 };
 export default Testimonials;
