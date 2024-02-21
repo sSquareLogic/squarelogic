@@ -9,15 +9,26 @@ import Hero from "@/components/hero/Hero";
 import Plans from "@/components/Home/plans/Plans";
 import Projects from "@/components/Home/projects/Projects";
 import Selected from "@/components/Home/selected/Selected";
-import Testimonials from "@/components/Testimonials/Testimonials";
 import Workflow from "@/components/Home/workflow/Workflow";
 import blocksToText from "@/sanity/lib/portableToText";
+
+// import Testimonials from "@/components/Testimonials/Testimonials";
 
 const Home = async () => {
   const home = (await getHomeData()) as IHome[];
   const profile = (await getProfileData()) as IProfile[];
-  const { about_us, contact_us, faq, hero, pricing, projects, selected_work, workflow, features, testimonials } =
-    home[0];
+  const {
+    about_us,
+    contact_us,
+    faq,
+    hero,
+    pricing,
+    projects,
+    selected_work,
+    workflow,
+    features,
+    // testimonials
+  } = home[0];
 
   return (
     <>
@@ -30,7 +41,7 @@ const Home = async () => {
         <Features {...features} />
         <Workflow {...workflow} />
         <FAQ {...faq} />
-        <Testimonials {...testimonials} />
+        {/* <Testimonials {...testimonials} /> */}
         <Plans {...pricing} />
         <Contact {...contact_us} />
       </main>
