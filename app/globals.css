@@ -19,6 +19,20 @@ a {
   line-height: 100%;
 }
 
+.exclude-leading {
+  line-height: 140%;
+}
+
+.exclude-leading p {
+  line-height: 140%;
+}
+.exclude-leading span {
+  line-height: 140%;
+}
+.exclude-leading a {
+  line-height: 140%;
+}
+
 /* body::-webkit-scrollbar {
   display: none;
   -ms-overflow-style: none;

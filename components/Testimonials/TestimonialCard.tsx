@@ -30,7 +30,7 @@ const TestimonialCard = ({ handle, name, text, img }: ITestimonial) => {
           <Image src="/star.svg" alt="star" width={16} height={16} className="w-4 h-4 object-contain" />
         </div>
       </div>
-      <div className="text-base text-WHITE">
+      <div className="text-base text-WHITE exclude-leading">
         <PortableText value={text} />
       </div>
     </div>
