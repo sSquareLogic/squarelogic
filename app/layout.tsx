@@ -1,4 +1,5 @@
 import "./globals.css";
+import "swiper/css";
 
 import { IProfile, getProfileData } from "@/sanity/schemas/profile";
 import { Inter, Space_Grotesk } from "next/font/google";
@@ -8,6 +9,8 @@ import { URL } from "url";
 import blocksToText from "@/sanity/lib/portableToText";
 import colors from "@/settings/colors";
 import { urlForImage } from "@/sanity/lib/image";
+
+// Import Swiper styles
 
 const spacegr = Space_Grotesk({ subsets: ["latin"] });
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "700"], variable: "--INTER" });
