@@ -61,7 +61,8 @@ export interface IPricing {
 export interface IContactUs {
   subtitle: string;
   description: any;
-  email: string;
+  cta_title: string;
+  cta_link: string;
 }
 
 export interface ITestimonial {
@@ -478,10 +479,16 @@ const home = {
           ],
         },
         {
-          name: "email",
-          description: "This is the email for the CTA button.",
+          name: "cta_title",
+          description: "This is the title of the CTA button.",
           type: "string",
-          title: "Email for the CTA button",
+          title: "Title of the CTA button",
+        },
+        {
+          name: "cta_link",
+          description: "This is the link of the CTA button.",
+          type: "url",
+          title: "Link of the CTA button",
         },
       ],
     },
