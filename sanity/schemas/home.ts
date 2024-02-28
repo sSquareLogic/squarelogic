@@ -67,6 +67,7 @@ export interface IContactUs {
 
 export interface ITestimonial {
   name: string;
+  link: string;
   handle: string;
   img: any;
   text: any;
@@ -517,6 +518,12 @@ const home = {
                   description: "X handle of the person who gave the testimonial.",
                   type: "string",
                   title: "X handle",
+                },
+                {
+                  name: "link",
+                  description: "Link to the testimonial.",
+                  type: "url",
+                  title: "Link",
                 },
                 {
                   name: "img",
