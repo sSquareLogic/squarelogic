@@ -1,12 +1,12 @@
 "use client";
 
-import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useMediaQuery, useWindowSize } from "usehooks-ts";
 import useTransformValue, { IRange } from "@/hooks/useTransformValue";
 
 import CursorHover from "../animated/CursorHover";
 import { ITestimonials } from "@/sanity/schemas/home";
+import { Pagination } from "swiper/modules";
 import TestimonialCard from "./TestimonialCard";
 
 interface IProps {
@@ -37,10 +37,9 @@ const TestimonialsSwiper = ({ testimonials }: IProps) => {
 
   return (
     <Swiper
-      autoplay={{ delay: 3000 }}
       spaceBetween={breakpoint.max_sm ? 16 : 24}
       slidesPerView={transformedWidth}
-      modules={[Autoplay, Pagination]}
+      modules={[Pagination]}
       pagination={{
         el: ".testimonial-pagination",
         bulletClass: "testimonial-pagination-bullet",
