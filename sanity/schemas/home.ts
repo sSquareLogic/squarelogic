@@ -55,6 +55,7 @@ export interface IPricing {
     description: any;
     link: string;
     features?: string[];
+    monthly?: boolean;
   }[];
 }
 
@@ -438,6 +439,12 @@ const home = {
                   description: "This is the link to book a call.",
                   type: "string",
                   title: "Link to a call",
+                },
+                {
+                  name: "monthly",
+                  description: "If this is a monthly plan, check this.",
+                  type: "boolean",
+                  title: "Monthly",
                 },
                 {
                   name: "features",

@@ -10,7 +10,7 @@ interface IProps extends PricingItemsListElementType {
   accent?: boolean;
 }
 
-const Plan = ({ accent, description, name, features, price }: IProps) => {
+const Plan = ({ accent, description, name, features, price, monthly }: IProps) => {
   return (
     <div
       className="plan p-10 flex flex-col gap-6 h-full w-full bg-LIGHTBLACK rounded-3xl max-[1200px]:max-w-[600px]"
@@ -29,9 +29,11 @@ const Plan = ({ accent, description, name, features, price }: IProps) => {
               >
                 {price}
               </span>
-              <span className="text-WHITE text-base" style={accent ? { color: colors.BLACK } : {}}>
-                per month
-              </span>
+              {monthly && (
+                <span className="text-WHITE text-base" style={accent ? { color: colors.BLACK } : {}}>
+                  per month
+                </span>
+              )}
             </div>
             <div
               className="text-lg text-WHITE leading-[140%] max-sm:text-base"
