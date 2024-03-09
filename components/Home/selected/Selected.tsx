@@ -17,7 +17,7 @@ const Selected = ({ description, image, link, project_name, year }: ISelectedWor
               alt="Selected work image"
               width={1320}
               height={742}
-              className="w-full max-h-[742px] h-full object-cover rounded-[24px] transition-all hover:scale-[105%] ease-out duration-500"
+              className="w-full h-full object-cover rounded-[24px] transition-all hover:scale-[105%] ease-out duration-500"
             />
           </AnimatedImage>
           <div className="flex flex-col gap-4">

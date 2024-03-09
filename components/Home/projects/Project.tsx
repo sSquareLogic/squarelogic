@@ -33,18 +33,18 @@ const Project = ({ description, image, link, project_name, year, i, progress, ra
       href={link}
       ref={container}
       target="_blank"
-      className="flex flex-col gap-4 sticky top-0 mx-auto  max-w-[1134px] max-h-[550px] max-md:max-w-none max-md:max-h-none bg-BLACK"
+      className="flex flex-col gap-4 sticky top-0 mx-auto max-w-[900px] max-h-[500px] max-md:max-w-none max-md:max-h-none bg-BLACK rounded-t-[24px] overflow-hidden"
       style={{ top: `calc(10% + ${i * 32}px)`, scale }}
     >
       <div className="project relative rounded-[24px] overflow-hidden">
         <motion.div style={{ scale: imageScale }}>
           <AnimatedImage>
             <Image
-              src={breakpoint ? urlForImage(image).url() : urlForImage(image).size(1134, 550).url()}
+              src={breakpoint ? urlForImage(image).url() : urlForImage(image).size(900, 600).url()}
               alt="Project image"
-              width={1134}
-              height={550}
-              className="w-full h-full object-cover"
+              width={900}
+              height={600}
+              className="object-contain"
             />
           </AnimatedImage>
         </motion.div>
