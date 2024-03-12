@@ -22,12 +22,7 @@ const ProjectsShow = ({ projects }: IProjects["projects"]) => {
         <div className="projects-row flex flex-col gap-[92px] max-sm:gap-20">
           {projects.row_1.map((project, i) => (
             <AnimateInView key={i}>
-              <ProjectImage
-                description={project.description}
-                link={project.link}
-                image={project.image}
-                project_name={project.project_name}
-              />
+              <ProjectImage {...project} />
             </AnimateInView>
           ))}
         </div>
@@ -38,12 +33,7 @@ const ProjectsShow = ({ projects }: IProjects["projects"]) => {
         >
           {projects.row_2.map((project, i) => (
             <AnimateInView key={i}>
-              <ProjectImage
-                description={project.description}
-                link={project.link}
-                image={project.image}
-                project_name={project.project_name}
-              />
+              <ProjectImage {...project} />
             </AnimateInView>
           ))}
         </motion.div>
