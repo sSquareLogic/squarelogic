@@ -7,8 +7,8 @@ export interface IHero {
 
 export interface IProjectsSection {
   projects: {
-    row_1: { project_name: string; image: any; description: any; link: string }[];
-    row_2: { project_name: string; image: any; description: any; link: string }[];
+    row_1: { project_name: string; image: any; link: string }[];
+    row_2: { project_name: string; image: any; link: string }[];
   };
 }
 
@@ -95,21 +95,21 @@ const projects = {
                       type: "image",
                       title: "Image",
                     },
-                    {
-                      name: "description",
-                      type: "array",
-                      title: "Description",
-                      of: [
-                        {
-                          type: "block",
-                        },
-                      ],
-                    },
-                    {
-                      name: "link",
-                      type: "string",
-                      title: "Link",
-                    },
+                    // {
+                    //   name: "description",
+                    //   type: "array",
+                    //   title: "Description",
+                    //   of: [
+                    //     {
+                    //       type: "block",
+                    //     },
+                    //   ],
+                    // },
+                    // {
+                    //   name: "link",
+                    //   type: "string",
+                    //   title: "Link",
+                    // },
                   ],
                 },
               ],
@@ -133,21 +133,21 @@ const projects = {
                       type: "image",
                       title: "Image",
                     },
-                    {
-                      name: "description",
-                      type: "array",
-                      title: "Description",
-                      of: [
-                        {
-                          type: "block",
-                        },
-                      ],
-                    },
-                    {
-                      name: "link",
-                      type: "string",
-                      title: "Link",
-                    },
+                    // {
+                    //   name: "description",
+                    //   type: "array",
+                    //   title: "Description",
+                    //   of: [
+                    //     {
+                    //       type: "block",
+                    //     },
+                    //   ],
+                    // },
+                    // {
+                    //   name: "link",
+                    //   type: "string",
+                    //   title: "Link",
+                    // },
                   ],
                 },
               ],
