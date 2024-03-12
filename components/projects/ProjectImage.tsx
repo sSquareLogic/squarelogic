@@ -13,8 +13,8 @@ const ProjectImage = ({ image, description, project_name, link }: IProjects["pro
           alt="Project image"
           unoptimized
           width={600}
-          height={600}
-          className="object-cover object-center w-full h-full aspect-square transition-all hover:scale-[105%] ease-out duration-500"
+          height={400}
+          className="object-cover object-center w-full"
         />
       </AnimatedImage>
       <p className="text-2xl">
