@@ -37,7 +37,7 @@ const AnimatedTextWord = ({ text }: IProps) => {
   };
 
   return (
-    <div className="max-w-[70%] uppercase overflow-hidden flex flex-col justify-center text-2xl font-medium gap-y-2 max-md:text-xl max-md:max-w-none max-sm:text-lg">
+    <div className="max-w-none uppercase overflow-hidden flex flex-col justify-center text-2xl font-medium gap-y-2 max-md:text-xl max-md:max-w-none max-sm:text-lg">
       {makeParagraphs(words).map((word, index) => (
         <motion.p
           key={index}
