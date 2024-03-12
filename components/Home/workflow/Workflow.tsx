@@ -8,7 +8,7 @@ const Workflow = ({ items, subtitle }: IWorkflow) => {
     <section className="workflow">
       <Container className="flex flex-col gap-12 max-lg:gap-8">
         <div className="flex flex-col gap-6 max-md:gap-4">
-          <span className="text-lg font-medium">(Our workflow)</span>
+          {/* <span className="text-lg font-medium">(Our workflow)</span> */}
           <Title text={subtitle} />
         </div>
         <div className="flex flex-col border-b border-BLACK3">
