@@ -2,7 +2,6 @@
 
 import { motion, useInView } from "framer-motion";
 
-import AnimatedButton from "../animated/AnimatedButton";
 import AnimatedTextWord from "@/components/animated/AnimatedTextWord";
 import Container from "@/components/Container";
 import CursorHover from "../animated/CursorHover";
