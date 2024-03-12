@@ -15,6 +15,7 @@
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.32.0",
     "@studio-freight/lenis": "^1.0.39",
+    "@studio-freight/react-lenis": "^0.0.45",
     "@types/react-google-recaptcha": "^2.1.9",
     "framer-motion": "^11.0.8",
     "google-auth-library": "^9.6.3",
