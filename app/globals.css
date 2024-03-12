@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  scroll-behavior: smooth !important;
-}
-
 h1,
 h2,
 h3,
@@ -32,12 +28,6 @@ a {
 .exclude-leading a {
   line-height: 140%;
 }
-
-/* body::-webkit-scrollbar {
-  display: none;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-} */
 
 html.lenis {
   height: auto;

@@ -5,7 +5,7 @@ import FloatingNav from "@/components/nav/FloatingNav";
 import Footer from "@/components/footer/Footer";
 import MouseFollower from "@/components/animated/MouseFollower";
 import ScrollProgress from "@/components/animated/ScrollProgress";
-import SmoothScroll from "@/components/animated/SmoothScroll";
+import SmoothScroll from "@/components/SmoothScroll";
 import { ToastContainer } from "react-toastify";
 import colors from "@/settings/colors";
 
