@@ -1,4 +1,3 @@
-import AnimatedImage from "@/components/animated/AnimatedImage";
 import Container from "@/components/Container";
 import { ISelectedWork } from "@/sanity/schemas/home";
 import Image from "next/image";
@@ -10,16 +9,14 @@ const Selected = ({ description, image, link, project_name, year }: ISelectedWor
     <section className="selected">
       <a href={link} target="_blank">
         <Container className="flex flex-col gap-4">
-          <h4 className="text-lg font-medium">(Selected work)</h4>
-          <AnimatedImage>
-            <Image
-              src={urlForImage(image).url()}
-              alt="Selected work image"
-              width={1320}
-              height={742}
-              className="w-full h-full object-cover rounded-[24px] transition-all hover:scale-[105%] ease-out duration-500"
-            />
-          </AnimatedImage>
+          <h4 className="text-lg font-medium">(Our best work)</h4>
+          <Image
+            src={urlForImage(image).url()}
+            alt="Selected work image"
+            width={1320}
+            height={742}
+            className="w-full h-full object-cover rounded-[24px]"
+          />
           <div className="flex flex-col gap-4">
             <div className="flex items-center justify-between gap-6 text-lg font-medium">
               <span>{project_name}</span>
