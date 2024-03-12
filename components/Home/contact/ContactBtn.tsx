@@ -1,19 +1,28 @@
 "use client";
 
-import AnimatedButton from "@/components/animated/AnimatedButton";
-import { IContactUs } from "@/sanity/schemas/home";
+import CursorHover from "@/components/animated/CursorHover";
+import Image from "next/image";
 import { useMediaQuery } from "usehooks-ts";
 
-interface IProps {
-  cta_link: IContactUs["cta_link"];
-  cta_title: IContactUs["cta_title"];
-}
-
-const ContactBtn = ({ cta_link, cta_title }: IProps) => {
+const ContactBtn = () => {
   const breakpoints = {
-    md: useMediaQuery("(max-width: 768px)"),
+    md: useMediaQuery("(min-width: 768px)", {
+      defaultValue: false,
+    }),
   };
 
-  return <AnimatedButton width={breakpoints.md ? "w-full" : "w-fit"} name={cta_title} link={cta_link} />;
+  return (
+    <CursorHover fullWidth={!breakpoints.md}>
+      <a
+        href={"https://calendly.com/mikejames1311005/squarelogic"}
+        target="_blank"
+        style={{ width: !breakpoints.md ? "100%" : "fit-content" }}
+        className="flex gap-4 items-center justify-center min-w-52 rounded-[56px] bg-ACCENT text-center py-6 px-6 text-BLACK font-bold text-xl font-INTER -tracking-[1%]"
+      >
+        <span>Book A Call</span>
+        <Image src={"/arrow-big.svg"} alt="Arrow" width={20} height={20} />
+      </a>
+    </CursorHover>
+  );
 };
 export default ContactBtn;

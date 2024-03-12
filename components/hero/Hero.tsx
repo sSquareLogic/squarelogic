@@ -3,7 +3,7 @@
 import { motion, useInView } from "framer-motion";
 
 import AnimatedTextWord from "@/components/animated/AnimatedTextWord";
-import CallButton from "../CallButton";
+import ContactBtn from "../Home/contact/ContactBtn";
 import Container from "@/components/Container";
 import { IHero } from "@/sanity/schemas/home";
 import TopText from "./TopText";
@@ -52,7 +52,7 @@ const Hero = ({ description, title }: IHero) => {
           <div className="overflow-hidden">
             <AnimatedTextWord text={typeof description === "string" ? description : blocksToText(description)} />
           </div>
-          <CallButton />
+          <ContactBtn />
         </Container>
       </div>
     </section>

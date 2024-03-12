@@ -4,7 +4,7 @@ import { IContactUs } from "@/sanity/schemas/home";
 import { PortableText } from "@portabletext/react";
 import Title from "@/components/Title";
 
-const Contact = ({ description, cta_link, cta_title, subtitle }: IContactUs) => {
+const Contact = ({ description, subtitle }: IContactUs) => {
   return (
     <section className="contact">
       <Container className="grid grid-cols-THIRTEE gap-10 max-md:flex max-md:flex-col max-md:gap-8">
@@ -16,7 +16,7 @@ const Contact = ({ description, cta_link, cta_title, subtitle }: IContactUs) => 
           <div className="leading-[120%] flex flex-col gap-8 text-[32px] font-medium max-md:text-[28px] max-sm:text-[24px]">
             <PortableText value={description} />
           </div>
-          <ContactBtn cta_link={cta_link} cta_title={cta_title} />
+          <ContactBtn />
         </div>
       </Container>
     </section>
