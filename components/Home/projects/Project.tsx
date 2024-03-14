@@ -2,7 +2,6 @@
 
 import { MotionValue, motion, useScroll, useTransform } from "framer-motion";
 
-import AnimatedImage from "../../animated/AnimatedImage";
 import { IProjects } from "@/sanity/schemas/home";
 import Image from "next/image";
 import { PortableText } from "@portabletext/react";
@@ -38,15 +37,13 @@ const Project = ({ description, image, link, project_name, year, i, progress, ra
     >
       <div className="project relative rounded-[24px] overflow-hidden">
         <motion.div style={{ scale: imageScale }}>
-          <AnimatedImage>
-            <Image
-              src={breakpoint ? urlForImage(image).url() : urlForImage(image).size(900, 600).url()}
-              alt="Project image"
-              width={900}
-              height={600}
-              className="object-contain"
-            />
-          </AnimatedImage>
+          <Image
+            src={breakpoint ? urlForImage(image).url() : urlForImage(image).size(900, 600).url()}
+            alt="Project image"
+            width={900}
+            height={600}
+            className="object-contain"
+          />
         </motion.div>
       </div>
       <div className="flex flex-col gap-4">
