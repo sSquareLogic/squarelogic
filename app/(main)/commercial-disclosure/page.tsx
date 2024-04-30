@@ -6,7 +6,7 @@ const CommercialDisclosurePage = () => {
       <Container className="pt-10 flex flex-col">
         <h1 className="text-3xl font-bold text-center pb-10">Commercial Disclosure (特定商取引法に基づく表記)</h1>
         <pre>{`
-        Legal Name: SQUARELOGIC Agency
+        Legal Name: SQUARELOGIC
 
         Address: We will disclose without delay if requested.
         
