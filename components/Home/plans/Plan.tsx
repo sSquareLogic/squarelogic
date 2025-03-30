@@ -59,7 +59,7 @@ const Plan = ({ accent, description, name, features, price, monthly }: IProps) =
       <div className="flex flex-col gap-6">
         <CursorHover>
           <a
-            href={"https://calendly.com/mikejames1311005/squarelogic"}
+            href={"https://cal.com/devdugg/discovery-call"}
             target="_blank"
             className="block rounded-[56px] w-full bg-ACCENT text-center py-4 px-6 text-BLACK font-bold text-lg font-INTER -tracking-[1%]"
             style={accent ? { background: colors.BLACK, color: colors.WHITE } : {}}

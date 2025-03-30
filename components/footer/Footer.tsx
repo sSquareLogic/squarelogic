@@ -14,17 +14,17 @@ const Footer = () => {
         <div className="grid grid-cols-THREE gap-8 max-md:flex max-md:flex-col max-md:gap-6 max-md:items-center">
           <div className="flex items-center gap-4 justify-self-start text-lg font-medium font-INTER -tracking-[1%] max-md:justify-between max-md:min-w-[300px] max-[450px]:min-w-none">
             <CursorHover>
-              <a href="https://twitter.com/duggsquarelogic" target="_blank">
+              <a href="https://x.com/DevDugg" target="_blank">
                 Twitter
               </a>
             </CursorHover>
             <CursorHover>
-              <a href="https://www.instagram.com/square_logic/" target="_blank">
+              <a href="https://www.instagram.com/devdugg/" target="_blank">
                 Instagram
               </a>
             </CursorHover>
             <CursorHover>
-              <a href="https://t.me/duggthevicious" target="_blank">
+              <a href="https://t.me/DevDugg" target="_blank">
                 Telegram
               </a>
             </CursorHover>
