@@ -28,7 +28,7 @@ export const generateMetadata = async () => {
   const description = blocksToText(profileData[0].description);
   return {
     applicationName: "SQUARELOGIC",
-    metadataBase: new URL("https://squarelogic.space"),
+    metadataBase: new URL("https://www.mizeru.com"),
     keywords: profileData[0].keywords,
     title: profileData[0].name,
     description: description,
